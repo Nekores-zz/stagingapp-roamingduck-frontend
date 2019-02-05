@@ -1,4 +1,4 @@
-# stagingapp-roamingduck-frontend
+# About Application & Installation
 
 Front end completely based on HTML/CSS/JS/BOOTSTRAP
 
