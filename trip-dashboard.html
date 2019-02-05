@@ -5,15 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trip - Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="frameworks/bootstrap/css/bootstrap.min.css" />
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
     
 </head>
-<body>
+<body id="mainRoot" class="trip-dashboard">
+
+    <!-- NAVBAR COMPONENT -->
+    <section id="navbarSection" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <!-- <a class="navbar-brand" href="#">Beta</a> -->
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+        
+                        <div class="collape navbar-collapse">
+                            <ul class="navbar-nav mr-auto">
+                                <!-- <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Trip
+                                    </a>
+                                    <div class="dropdown-menu animation slideDownIn dropdownTrip" aria-labelledby="navbarDropdown">
+                                        <h6 class="dropdown-header">Dropdown header</h6>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <form action="">
+                                            <label for=""> trip</label>
+                                        <input type="text" placeholder="enter something"/>
+                                        </form>
+                                    </div>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li> -->
+                            </ul>
+                            
+                        </div>
+                        <div class="rightPart">
+                            <ul class="navbar-nav mr-auto">
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <p class="fa fa-user-plus">
+                        
+                                        </p>
+                                    </a>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle UserProfile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <p class="fa fa-user-plus">
+                                        
+                                        </p>
+                                    </a>
+                                    <div class="dropdown-menu dropdownInvite dropdown-menu- animation slideDownIn" aria-labelledby="navbarDropdown">
+                                        <h6 class="dropdown-header">Invitation</h6>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe placeat magni velit quam quia, rem nam ducimus atque ex fuga commodi numquam aut quod? Voluptatem consequuntur optio cum quod impedit?</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <p class="fa fa-exclamation-circle"> </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle UserProfile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img src="img/user.jpg" class="img-fluid ProfilePic" alt="">
+                                    </a>
+                                    <div class="dropdown-menu dropdownProfile dropdown-menu- animation slideDownIn" aria-labelledby="navbarDropdown">
+                                        <h6 class="dropdown-header">User Profile</h6>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="bodyMain">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 chatbox">
+                    <h1> i am heaidng</h1>
+                </div>
+                <div class="col-md-6 menubox">
+                    <h1> i am heaidng</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
+    <!-- SCRIPTS -->
 
+    <!-- JQUERRY -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    
+    <!-- POPPER JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS -->
+    <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <script src="frameworks/bootstrap/js/bootstrap.bundle.js"></script>
 
-
-    <!-- sripts -->
+    <!-- MAIN JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
