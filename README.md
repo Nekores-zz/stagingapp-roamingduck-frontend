@@ -1,4 +1,4 @@
-# About Application & Installation
+# Installation
 
 Front end completely based on HTML/CSS/JS/BOOTSTRAP
 
