@@ -6,21 +6,34 @@
 
 /* NAVBAR SECTION */
 #navbarSection{
-    /* background: red; */
+	/* background: red; */
+	box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.31);
 }
-
-
 
 #bodyMain{
-    /* height: 100vh; */
+	padding-top: 30px;
+	background: #3cac71;
 }
 #bodyMain .chatbox{
-    background: green;
-    height: 80vh;
+	height: calc(100vh - 130px);
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	border-radius: 12px 12px 0px 0;
 }
+#bodyMain .alpha-color{
+	border-radius: 12px 12px 0px 0;
+	background: rgba(196, 177, 5, 0.34);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.31);
+}
+
 #bodyMain .menubox{
-    background: red;
-    height: 80vh;
+    height: calc(100vh - 130px);
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	border-radius: 12px 12px 0px 0;
 }
 
 #mainRoot .dropdown a.UserProfile::after{
@@ -60,8 +73,16 @@ a.focus{
 }
 .dropdownTrip{
     position: relative;
-    top: 60px;
+	top: 57px !important;
+	width: auto !important;
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
+}
+.tripUl{
+	padding: 12px 0;
+	margin: 0;
+}
+.tripUl li{
+	display: inline-block;
 }
 .dropdownInvite{
     position: relative;
@@ -69,23 +90,162 @@ a.focus{
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
 }
 .dropdownTrip::before, .dropdownProfile::before, .dropdownInvite::before{
-    content: '';
-position: absolute;
-left: 21px;
-right: 0;
-top: -11px;
-background: white;
-height: 20px;
-width: 20px;
-transform: rotate(45deg);
-overflow-y: 0;
-border: 1px solid rgba(0,0,0,.15);
-border-bottom: 0px;
-border-right: 0px;
+	content: '';
+	position: absolute;
+	left: 21px;
+	right: 0;
+	top: -11px;
+	background: white;
+	height: 20px;
+	width: 20px;
+	transform: rotate(45deg);
+	overflow-y: 0;
+	border: 1px solid rgba(0,0,0,.15);
+	border-bottom: 0px;
+	border-right: 0px;
 }
 
 
+.chatFormInput{
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	/* margin-left: 15px; */
+/* padding-right: 30px; */
 
+}
+.chatFormInput textarea.form-control{
+	border-radius: 12px 12px 0px 0px;
+	position: relative;
+	padding-left: 80px;
+	padding-right: 80px;
+	border:0;
+box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+}
+
+.chatFormInput input[type="file"]{
+width: 50px;
+padding: 50px 0 0 0;
+height: 50px;
+overflow: hidden;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: transparent;
+border-radius: 50%;
+background-size: 60px 60px;
+position: absolute;
+border: none;
+top: 8px;
+background: rgba(51, 51, 51, 0.08);
+left: 8px;
+margin: 10px;
+cursor: pointer;
+transition: 0.5s all ease-in-out;
+}
+
+.chatFormInput input[type="file"]:hover, .chatFormInput .sendBtn:hover, .chatFormInput .sendBtn:focus {
+	color: #495057;
+	box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.27);
+}
+.chatFormInput input[type="file"]::after{
+	content: '\f0c6';
+	position: absolute;
+	top: 9px;
+	left: 12px;
+	height: 74px;
+	width: 50px;
+	font-size: 30px;
+	
+	
+	
+}
+.chatFormInput .sendBtn{
+	position: absolute;
+bottom: 18px;
+right: 45px;
+height: 74px;
+width: 50px;
+font-size: 30px;
+border-radius: 50%;
+background: rgba(51, 51, 51, 0.08);
+border: none;
+width: 50px;
+height: 50px;
+transition: 0.5s all ease-in-out;
+cursor: pointer;
+}
+
+#chats{
+	height: 70vh;
+overflow: hidden;
+overflow-y: scroll;
+
+}
+.msgItem{
+	background: red;
+border-radius: 12px;
+padding: 10px;
+margin: 20px;
+position: relative;
+top: 0;
+font-size: 14px;
+letter-spacing: 0.2px;
+/* width: max-content; */
+
+}
+.recievedMsg{
+	background: white;
+	/* box-shadow: -1px 1px 10px #a5a5a5 */
+	display: inline-block;
+float: left;
+border-radius: 12px 12px 12px 0px;
+}
+.recievedMsg::after{
+	content: '';
+position: absolute;
+left: 0px;
+bottom: -10px;
+border-left: 10px solid white;
+border-top: 10px solid white;
+border-bottom: 10px solid transparent;
+border-right: 10px solid transparent;
+}
+
+.sentMsg{
+	background: #36ad6f;
+	/* box-shadow: -1px 1px 10px #a5a5a5; */
+	color: white;
+	font-weight: 100;
+	position: relative;
+	/* top: 43px; */
+	display: inline-block;
+float: right;
+}
+.sentMsg::after{
+	content: '';
+position: absolute;
+right: 0px;
+bottom: -10px;
+transform: rotate(90deg);
+border-left: 10px solid #36ad6f;
+border-top: 10px solid #36ad6f;
+border-bottom: 10px solid transparent;
+border-right: 10px solid transparent;
+}
+.bottomMenuGroup{
+	height: 86px;
+background: white;
+position: absolute;
+width: 100%;
+/* margin-left: 15px; */
+/* padding-right: 30px; */
+bottom: 0;
+border:0;
+box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+border-radius: 12px 12px 0px 0px;
+}
 
 
 
