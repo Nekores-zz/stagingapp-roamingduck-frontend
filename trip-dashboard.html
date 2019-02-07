@@ -24,77 +24,63 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <ul class="tripUl">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Trip
-                            </a>
-                            <div class="dropdown-menu animation slideDownIn dropdownTrip" aria-labelledby="navbarDropdown">
-                                <h6 class="dropdown-header">Dropdown header</h6>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else hereSomething else hereSomething else here</a>
-                                <form action="">
-                                    <label for=""> trip</label>
-                                    <input type="text" placeholder="enter something" />
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
+                    <p class="tripBtn">
+                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            Trip Stack <span class="fa fa-eye"> </span>
+                        </a>
+                        
+                    </p>
                 </div>
+                
                 <div class="col">
                     <ul class="tripUl text-right">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Trip
+                            <a class="btn-theme-circle-primary btn-invite" data-toggle="collapse" href="#invitationUserCollpase" role="button" aria-expanded="false"
+                                aria-controls="invitationUserCollpase">
+                                <span class="fa fa-user-plus"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right animation slideDownIn dropdownTrip" aria-labelledby="navbarDropdown">
-                                <h6 class="dropdown-header">Dropdown header</h6>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <form action="">
-                                    <label for=""> trip</label>
-                                    <input type="text" placeholder="enter something" />
-                                </form>
-                            </div>
                         </li>
+                       
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                Trip
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right animation slideDownIn dropdownTrip" aria-labelledby="navbarDropdown">
-                                <h6 class="dropdown-header">Dropdown header </h6>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <form action="">
-                                    <label for=""> trip</label>
-                                    <input type="text" placeholder="enter something" />
-                                </form>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle UserProfile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle UserProfile" href="#" data-toggle="modal" data-target="#exampleModalCenter">
                                 <img src="img/user.jpg" class="img-fluid ProfilePic" alt="">
                             </a>
-                            <div class="dropdown-menu dropdownProfile dropdown-menu- animation slideDownIn" aria-labelledby="navbarDropdown">
-                                <h6 class="dropdown-header">User Profile</h6>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Edit Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Help</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <p class="fa fa-exclamation-circle"> </p>
+                         <li class="nav-item dropdown">
+                            <a class="btn-theme-circle-primary btn-about" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                <span class="fa fa-exclamation"></span>
                             </a>
                         </li>
                     </ul>
@@ -106,12 +92,124 @@
 
 
     <section id="bodyMain">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- TRIPS COLLAPSE UP/DOWN -->
+                    <div class="collapse dropdownCollapse" id="collapseExample">
+                        <div class="card card-body">
+                           <div class="tripTasks">
+                               <ol>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">5</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Create new trip..." aria-label="Create new trip..."
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"> <span class="fa fa-plus"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <br/>
+                                   <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">1</span>
+                                        </div>
+                                        <input type="text" class="form-control" value="Trip to Pakistan " aria-label="Trip to thiland "
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
+                                            <button class="btn btn-danger" type="button"> <span class="fa fa-trash"></span></button>
+                                        </div>
+                                    </div>
+                                   </li>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">2</span>
+                                        </div>
+                                        <input type="text" class="form-control" value="Trip to United States" aria-label="Trip to United States"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
+                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">3</span>
+                                        </div>
+                                        <input type="text" class="form-control" value="Trip to India" aria-label="Trip to London"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
+                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">4</span>
+                                        </div>
+                                        <input type="text" class="form-control" value="Trip to Pakistan" aria-label="Trip to Pakistan"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
+                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                               </ol>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <!-- INVITATION COLLPASE UP/DOWN -->
+                    <div class="collapse dropdownCollapse" id="invitationUserCollpase">
+                        <div class="card card-body">
+                            <div class="invitationJumbor">
+                                <ol>
+                                    <li>
+                                        <div class="jumbotron">
+                                            <h1 class="display-4">Invite People!</h1>
+                                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra.</p>
+                                            <hr class="my-4">
+
+                                            <br/>
+                                            <form> 
+                                                <div class="input-group input-group-lg">
+                                                <input required type="email" class="form-control" placeholder="Your friend's email adress..." aria-label="Your Friend's Email Adress..."
+                                                    aria-describedby="basic-addon2">
+                                                    
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="submit"> <span class="fa fa-paper-plane"></span></button>
+                                                </div>
+                                            </div>
+                                            </form>
+                                        <br/>
+                                    
+    </div>
+                                        
+                                    </li>   
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     <div class="chatbox">
                         <div class="alpha-color">
-                            <!-- <h1> i am heaidng</h1> -->
+                            <h3 class="boXtitle">Collaborate with your agent & friends</h3>
                             <div id="chats">
                                 <div class="row">
                                     <div class="col-12">
@@ -160,15 +258,12 @@
                                             Wait please, we are processing.
                                         </div>
                                     </div>
-                                    
-
-                                    
                                 </div>
                             </div>
                             <form class="chatFormInput">
-                                <textarea class="form-control" rows="3" type="text"> </textarea>
-                                <input class="form-control fa fa-paper-clip" type="file" />
-                                <button class="fa fa-paper-plane sendBtn"> </button>
+                                <textarea class="form-control" rows="3" type="text" placeholder="Type your message..."></textarea>
+                                <input class="btn-theme-circle-default form-control fa fa-paper-clip" type="file" />
+                                <button class="btn-theme-circle-primary fa fa-paper-plane sendBtn"> </button>
                             </form>
                         </div>
                     </div>
@@ -176,18 +271,45 @@
                 <div class="col-md-6">
                     <div class="menubox">
                         <div class="alpha-color">
-                            <h1> i am heaidng</h1>
+                            <h3 class="boXtitle"> Build & share Itinerary</h3>
                             <div class="bottomMenuGroup">
-                                <!-- Default dropup button -->
-                                <div class="btn-group dropup">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Dropup
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        task
-                                    </div>
+                                <div class="buttonGroupMenuDropUp">
+                                    <ul>
+                                        <li>
+                                            <a href-="#">
+                                                <span class="fa fa-plane"></span>
+                                                <p class="menuCaption"> Flight</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href-="#">
+                                                <span class="fa fa-bed"></span>
+                                                <p class="menuCaption"> Acco..</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href-="#">
+                                                <span class="fa fa-subway"></span>
+                                                <p class="menuCaption"> Flight</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href-="#">
+                                                <span class="fa fa-chrome"></span>
+                                                <p class="menuCaption"> Flight</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
+                                   
+                                <a class="btn-theme-circle-bdr btn-bottomMenuGroup" data-toggle="collapse" href="#" role="button" aria-expanded="false"
+                                    aria-controls="">
+                                    <span class="fa fa-plus"></span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    task
+                                </div>
+
                             
                             </div>
                         </div>

@@ -1,28 +1,135 @@
 
 
+/* common */
+
+.btn-theme-circle-default{
+	border-radius: 50%;
+	background: rgba(51, 51, 51, 0.08);
+	font-size: 18px;
+    position: relative;
+	padding: 12px 15px;
+	transition:0.5s all ease-in-out;
+	color: #36ad6f;
+		
+}
+.btn-danger{
+	background-color: #f85462;
+	border-color: #f85462;
+}
+.btn-success{
+	background-color: #36ad6f;
+	border-color: #36ad6f;
+}
+.btn-theme-circle-primary{
+	border-radius: 50%;
+	background: #36ad6f;
+	color:white;
+	font-size: 18px;
+    position: relative;
+	padding: 12px 15px;
+	transition:0.5s all ease-in-out;
+		
+}
+.btn-theme-circle-primary:hover, .btn-theme-circle-primary:focus{
+	outline: none;
+		color:white;
+		/* background: #59d998; */
+		box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25)
+}
+.btn-theme-circle-bdr{
+	border-radius: 50%;
+	border: 2px solid #36ad6f;
+	font-size: 18px;
+    position: relative;
+	padding: 12px 15px;
+	color: #36ad6f;
+	transition: 0.5s all ease-in-out;
+	
+}
+.btn-theme-circle-bdr:hover, .btn-theme-circle-bdr:focus{
+	outline: none;
+	background: #36ad6f;
+	color: white !important;
+	box-shadow:0 0 0 0.2rem rgba(45, 174, 109, 0.25)
+	
+}
+a.focus{
+	outline: none !important;
+    border:none;
+}
 
 
-
-
+#mainRoot{
+	background: #36ad6f;
+}
 /* NAVBAR SECTION */
 #navbarSection{
-	/* background: red; */
-	box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.31);
+	box-shadow: 1px 1px 10px #33333330;
+    margin-bottom: 5px;
+    background: #36ad6f;
 }
 
 #bodyMain{
-	padding-top: 30px;
+
 	background: #3cac71;
+	position: relative;
+}
+#bodyMain ol{
+	margin-top: 15px;
+}
+#bodyMain ol li{
+	margin-bottom: 8px;
+}
+#bodyMain ol li .input-group {
+	    box-shadow: 1px 1px 10px #33333321;
+}
+#bodyMain ol li .input-group .input-group-prepend{
+	border-right: 1px solid #eee;
+	margin-right: 0;
+}
+#bodyMain ol li .input-group .input-group-prepend span.input-group-text{
+	border-color: transparent;
+	background: white;
+}
+#bodyMain ol li .input-group input{
+	background: white;
+	border-color: transparent;
+}
+#bodyMain ol li .input-group input:hover, #bodyMain ol li .input-group input:focus{
+	outline: none;
+	box-shadow: none;
+}
+#bodyMain ol li{
+	list-style-type: none;
+}
+#bodyMain .dropdownCollapse{
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+#bodyMain .dropdownCollapse .card{
+	border-radius: 0;
+	border:none;
+	border-top: 1px solid #f1f1f1;
+	border-radius: 0px 0px 12px 12px;
+	background-color: #f2f2f2;
+margin: 15px;
+margin-top: 0px;
+border: none;
+box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
 }
 #bodyMain .chatbox{
-	height: calc(100vh - 130px);
+	margin-top: 30px;
+	height: calc(100vh - 148px);
 	background: url('../img/bg.jpg');
-	background-size: cover;
-	border-radius: 12px 12px 0px 0;
+	/* background-size: cover; */
+	border-radius: 12px;
 }
 #bodyMain .alpha-color{
-	border-radius: 12px 12px 0px 0;
-	background: rgba(196, 177, 5, 0.34);
+	border-radius: 12px;
+	background: rgba(196, 177, 5, 0.49);
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -30,11 +137,84 @@
 }
 
 #bodyMain .menubox{
-    height: calc(100vh - 130px);
+	margin-top: 30px;
+    height: calc(100vh - 148px);
 	background: url('../img/bg.jpg');
-	background-size: cover;
-	border-radius: 12px 12px 0px 0;
+	/* background-size: cover; */
+	border-radius: 12px;
 }
+
+
+#bodyMain .menubox .buttonGroupMenuDropUp{
+	text-align: center;
+	font-size: 25px;
+}
+#bodyMain .menubox .buttonGroupMenuDropUp .menuCaption{
+	margin: 0;
+	    font-size: 8px;
+    text-transform: capitalize;
+    letter-spacing: 0.4px;
+	font-weight: 500;
+
+}
+#bodyMain .menubox .buttonGroupMenuDropUp ul{
+	    padding: 0;
+    margin: 0;
+    padding: 17px 20px;
+    box-shadow: 1px 1px 10px #33333359;
+    background: white;
+    /* display: inline-block; */
+    border-radius: 12px;
+    /* position: relative; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    top: -55px;
+    transition: 0.2s all ease-in-out;
+	opacity: 0;
+	transform: scale(0.5);
+
+	
+}
+#bodyMain .menubox .buttonGroupMenuDropUp ul li:last-child{
+	border: none;
+}
+#bodyMain .boXtitle{
+	margin:0;
+		    background: white;
+    border-radius: 12px 12px 0px 0px;
+    padding: 10px 15px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    box-shadow: 1px 1px 10px #33333330;
+	}
+.buttonGroupMenuDropUp .wow{
+	/* background: black !important; */
+	opacity: 1 !important;
+	top: -90px !important;
+	transform: scale(1) !important;
+	
+}
+#bodyMain .menubox .btn-bottomMenuGroup{
+	margin: 25px;
+	top: 30px;
+    left: 0;
+}
+/* #bodyMain .menubox .btn-bottomMenuGroup:focus .buttonGroupMenuDropUp{
+	background: green !important;
+
+
+} */
+#bodyMain .menubox .buttonGroupMenuDropUp ul li{
+	display: inline-block;
+    padding: 0px 12px;
+    border-right: 1px solid #f1f1f1;
+    color: #36ad6f;
+}
+
 
 #mainRoot .dropdown a.UserProfile::after{
     display: none;
@@ -54,10 +234,7 @@
 }
 
 
-a.focus{
-    outline: none !important;
-    border:none;
-}
+
 
 #mainRoot nav .rightPart ul li:not(:last-child){
     position: relative;
@@ -78,11 +255,87 @@ a.focus{
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
 }
 .tripUl{
-	padding: 12px 0;
+	padding: 18px 0;
 	margin: 0;
+}
+.tripUl .modal-content .modal-header{
+	border: none;
+	padding-bottom: 0;
+}
+.tripUl .modal-content{
+	border-radius: 12px;
+    border: none;
+    box-shadow: 1px 1px 30px #3339;
+
+}
+.tripUl .modal-content .modal-body ul{
+	padding: 0;
+}
+.tripUl .modal-content .modal-body ul li{
+	display: block;
+	text-align: center;
+	padding-bottom: 20px;
+	
+	
+}
+.tripUl .modal-content .modal-body ul li a{
+	color: #333;
+    font-size: 14px;
+	line-height: 35px;
+	text-decoration: none;
+	transition: 0.5s all ease-in-out;
+}
+.tripUl .modal-content .modal-body ul li:last-child a{
+	color: red;
+	transition: 0.5s all ease-in-out;
+}
+
+.tripUl .modal-content .modal-body ul li a:hover{
+	color: #36ad6f;
+}
+.tripUl .modal-content .modal-body ul li:last-child a:hover{
+	color: red;
 }
 .tripUl li{
 	display: inline-block;
+}
+
+.btn-invite{
+	position: relative;
+    top: 4px;
+	margin-right:4px;
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+.btn-about{
+	position: relative;
+	top: 4px;
+	margin-right:4px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+.invitationJumbor .jumbotron{
+	background-color: transparent;
+}
+
+.tripBtn{
+	margin: 0;
+	padding: 36px 0px;
+	padding-left: 10px;
+}
+	.tripBtn a{
+		border-radius: 40px;
+	font-size: 14px;
+	font-weight: 300;
+	text-decoration: none;
+	}
+	
+	
+	
+		.tripBtn a span{
+			font-size: 18px;
+	padding-left: 8px;
 }
 .dropdownInvite{
     position: relative;
@@ -116,13 +369,16 @@ a.focus{
 
 }
 .chatFormInput textarea.form-control{
-	border-radius: 12px 12px 0px 0px;
+	border-radius: 12px;
 	position: relative;
-	padding-left: 80px;
-	padding-right: 80px;
+	padding-left: 85px;
+	padding-right: 85px;
 	border:0;
-box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+	box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+	padding-top: 15px;
+	resize: none;
 }
+
 
 .chatFormInput input[type="file"]{
 width: 50px;
@@ -137,17 +393,17 @@ border-radius: 50%;
 background-size: 60px 60px;
 position: absolute;
 border: none;
-top: 8px;
+top: 12px;
 background: rgba(51, 51, 51, 0.08);
-left: 8px;
+left: 14px;
 margin: 10px;
 cursor: pointer;
 transition: 0.5s all ease-in-out;
 }
 
-.chatFormInput input[type="file"]:hover, .chatFormInput .sendBtn:hover, .chatFormInput .sendBtn:focus {
+.chatFormInput input[type="file"]:hover, .chatFormInput input[type="file"]:focus{
 	color: #495057;
-	box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.27);
+	box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
 }
 .chatFormInput input[type="file"]::after{
 	content: '\f0c6';
@@ -163,22 +419,19 @@ transition: 0.5s all ease-in-out;
 }
 .chatFormInput .sendBtn{
 	position: absolute;
-bottom: 18px;
-right: 45px;
-height: 74px;
-width: 50px;
-font-size: 30px;
-border-radius: 50%;
-background: rgba(51, 51, 51, 0.08);
-border: none;
-width: 50px;
-height: 50px;
-transition: 0.5s all ease-in-out;
-cursor: pointer;
+    bottom: 20px;
+    right: 23px;
+	height: 74px;
+	width: 50px;
+	border: none;
+	width: 50px;
+	height: 50px;
+	transition: 0.5s all ease-in-out;
+	cursor: pointer;
 }
 
 #chats{
-	height: calc(100vh - 200px);
+	height: calc(100vh - 260px);
 overflow: hidden;
 overflow-y: scroll;
 padding-bottom: 30px;
@@ -196,32 +449,43 @@ letter-spacing: 0.2px;
 
 }
 .recievedMsg{
-	background: white;
+	background: #f2f2f2;
 	/* box-shadow: -1px 1px 10px #a5a5a5 */
 	display: inline-block;
 float: left;
 border-radius: 12px 12px 12px 0px;
+left: 30px;
 }
 .recievedMsg::after{
 	content: '';
 position: absolute;
 left: 0px;
 bottom: -10px;
-border-left: 10px solid white;
-border-top: 10px solid white;
+border-left: 10px solid #f3f3f3;
+border-top: 10px solid #f3f3f3;
 border-bottom: 10px solid transparent;
 border-right: 10px solid transparent;
+}
+.recievedMsg::before{
+	content: '';
+position: absolute;
+left: -42px;
+top: 0px;
+border-radius: 50%;
+height: 35px;
+width: 35px;
+background: #Fff;
+border: 2px solid rgba(54, 173, 111, 0.44);
 }
 
 .sentMsg{
 	background: #36ad6f;
-	/* box-shadow: -1px 1px 10px #a5a5a5; */
 	color: white;
 	font-weight: 100;
 	position: relative;
-	/* top: 43px; */
 	display: inline-block;
-float: right;
+	float: right;
+	right: 30px;
 }
 .sentMsg::after{
 	content: '';
@@ -234,6 +498,17 @@ border-top: 10px solid #36ad6f;
 border-bottom: 10px solid transparent;
 border-right: 10px solid transparent;
 }
+.sentMsg::before{
+	content: '';
+position: absolute;
+right: -42px;
+top: 0px;
+border-radius: 50%;
+height: 35px;
+width: 35px;
+background: #Fff;
+border: 2px solid rgba(54, 173, 111, 0.44);
+}
 .bottomMenuGroup{
 	height: 86px;
 background: white;
@@ -244,7 +519,8 @@ width: 100%;
 bottom: 0;
 border:0;
 box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
-border-radius: 12px 12px 0px 0px;
+border-radius: 12px;
+text-align: center;
 }
 
 
@@ -258,16 +534,16 @@ border-radius: 12px 12px 0px 0px;
 /* Track */
 #chats::-webkit-scrollbar-track {
   /* background:transparent !important; */
-  border-radius: 50px;
+  /* border-radius: 50px; */
   background: #eee; 
-  border-radius: 0px 50px 0px 0px;
+  /* border-radius: 0px 50px 0px 0px; */
 }
  
 /* Handle */
 #chats::-webkit-scrollbar-thumb {
      border: 4px solid #eee;
     background: #37aa6e;
-	border-radius: 0px 50px 50px 0px;
+	/* border-radius: 0px 50px 50px 0px; */
 }
 
 /* Handle on hover */
@@ -384,4 +660,13 @@ border-radius: 12px 12px 0px 0px;
 	100% {
 		-webkit-transform: translateY(0%);
 	}			
+}
+
+
+
+/* MEDIA QUERIES */
+@media(min-width: 768px){
+	.UserProfile img{
+		margin: 0px 12px;
+	}
 }
