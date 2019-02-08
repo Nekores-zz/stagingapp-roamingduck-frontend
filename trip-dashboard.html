@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trip - Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="frameworks/bootstrap/css/bootstrap.min.css" />
 
@@ -15,40 +16,48 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
-    
+
 </head>
+
 <body id="mainRoot" class="trip-dashboard">
 
     <!-- NAVBAR COMPONENT -->
     <section id="navbarSection" class="bg-light">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-12 mobileColShow">
+                    <h2 class="DashboardTitle"> Trip Name</h2>
+                </div>
                 <div class="col">
                     <p class="tripBtn">
-                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                            aria-controls="collapseExample">
-                            Trip Stack <span class="fa fa-eye"> </span>
+                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            My Trips <span class="fa fa-eye"> </span>
                         </a>
-                        
+
                     </p>
                 </div>
-                
+               <div class="col-sm-auto desktopColShow">
+                   <h2 class="DashboardTitle"> Trip Name</h2>
+               </div>
                 <div class="col">
                     <ul class="tripUl text-right">
                         <li class="nav-item dropdown">
-                            <a class="btn-theme-circle-primary btn-invite" data-toggle="collapse" href="#invitationUserCollpase" role="button" aria-expanded="false"
+                            <a class="btn-theme-circle-primary btn-invite" data-toggle="collapse"
+                                href="#invitationUserCollpase" role="button" aria-expanded="false"
                                 aria-controls="invitationUserCollpase">
                                 <span class="fa fa-user-plus"></span>
                             </a>
                         </li>
-                       
+
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle UserProfile" href="#" data-toggle="modal" data-target="#exampleModalCenter">
+                            <a class="dropdown-toggle UserProfile" href="#" data-toggle="modal"
+                                data-target="#exampleModalCenter">
                                 <img src="img/user.jpg" class="img-fluid ProfilePic" alt="">
                             </a>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                                aria-hidden="true">
+                            <!-- Modal Profile -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -76,10 +85,34 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- Modal Print -->
+                            <div class="modal fade" id="PrintPaper" tabindex="-1" role="dialog" aria-labelledby="PrintPaperTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Continue Print</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                         <li class="nav-item dropdown">
-                            <a class="btn-theme-circle-primary btn-about" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
+                        <li class="nav-item dropdown">
+                            <a class="btn-theme-circle-primary btn-about" data-toggle="collapse" href="#AboutVersion"
+                                role="button" aria-expanded="false" aria-controls="AboutVersion">
                                 <span class="fa fa-exclamation"></span>
                             </a>
                         </li>
@@ -98,78 +131,87 @@
                     <!-- TRIPS COLLAPSE UP/DOWN -->
                     <div class="collapse dropdownCollapse" id="collapseExample">
                         <div class="card card-body">
-                           <div class="tripTasks">
-                               <ol>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">5</span>
+                            <div class="tripTasks">
+                                <ol>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">5</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Create new trip..."
+                                                aria-label="Create new trip..." aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"> <span
+                                                        class="fa fa-plus"></span></button>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Create new trip..." aria-label="Create new trip..."
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"> <span class="fa fa-plus"></span></button>
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">1</span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Trip to Pakistan "
+                                                aria-label="Trip to thiland " aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><span
+                                                        class="fa fa-pencil"></span></button>
+                                                <button class="btn btn-danger" type="button"> <span
+                                                        class="fa fa-trash"></span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <br/>
-                                   <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">1</span>
+                                    </li>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">2</span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Trip to United States"
+                                                aria-label="Trip to United States" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><span
+                                                        class="fa fa-pencil"></span></button>
+                                                <button class="btn btn-danger" type="button"><span
+                                                        class="fa fa-trash"></span></button>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" value="Trip to Pakistan " aria-label="Trip to thiland "
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
-                                            <button class="btn btn-danger" type="button"> <span class="fa fa-trash"></span></button>
+                                    </li>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">3</span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Trip to India"
+                                                aria-label="Trip to London" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><span
+                                                        class="fa fa-pencil"></span></button>
+                                                <button class="btn btn-danger" type="button"><span
+                                                        class="fa fa-trash"></span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                   </li>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">2</span>
+                                    </li>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">4</span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Trip to Pakistan"
+                                                aria-label="Trip to Pakistan" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><span
+                                                        class="fa fa-pencil"></span></button>
+                                                <button class="btn btn-danger" type="button"><span
+                                                        class="fa fa-trash"></span></button>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" value="Trip to United States" aria-label="Trip to United States"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
-                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">3</span>
-                                        </div>
-                                        <input type="text" class="form-control" value="Trip to India" aria-label="Trip to London"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
-                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">4</span>
-                                        </div>
-                                        <input type="text" class="form-control" value="Trip to Pakistan" aria-label="Trip to Pakistan"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"><span class="fa fa-pencil"></span></button>
-                                            <button class="btn btn-danger" type="button"><span class="fa fa-trash"></span></button>
-                                        </div>
-                                    </div>
-                                </li>
-                               </ol>
-                           </div>
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <!-- INVITATION COLLPASE UP/DOWN -->
                     <div class="collapse dropdownCollapse" id="invitationUserCollpase">
                         <div class="card card-body">
@@ -178,25 +220,55 @@
                                     <li>
                                         <div class="jumbotron">
                                             <h1 class="display-4">Invite People!</h1>
-                                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra.</p>
+                                            <p class="lead">This is a simple hero unit, a simple jumbotron-style
+                                                component for calling extra.</p>
                                             <hr class="my-4">
 
-                                            <br/>
-                                            <form> 
+                                            <br />
+                                            <form>
                                                 <div class="input-group input-group-lg">
-                                                <input required type="email" class="form-control" placeholder="Your friend's email adress..." aria-label="Your Friend's Email Adress..."
-                                                    aria-describedby="basic-addon2">
-                                                    
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-success" type="submit"> <span class="fa fa-paper-plane"></span></button>
+                                                    <input required type="email" class="form-control"
+                                                        placeholder="Your friend's email adress..."
+                                                        aria-label="Your Friend's Email Adress..."
+                                                        aria-describedby="basic-addon2">
+
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-success" type="submit"> <span
+                                                                class="fa fa-paper-plane"></span></button>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             </form>
-                                        <br/>
-                                    
-    </div>
-                                        
-                                    </li>   
+                                            <br />
+
+                                        </div>
+
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABOUT VERSION COLLPASE UP/DOWN -->
+                    <div class="collapse dropdownCollapse" id="AboutVersion">
+                        <div class="card card-body">
+                            <div class="invitationJumbor">
+                                <ol>
+                                    <li>
+                                        <div class="jumbotron">
+                                            <h1 class="display-4">Free Package</h1>
+                                            <p class="lead">Beta 0.11.1</p>
+                                            <hr class="my-4">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                                                nulla sunt explicabo. Praesentium eveniet ex adipisci aliquid fuga totam
+                                                soluta hic nostrum, magni inventore aspernatur consequuntur architecto
+                                                ullam optio debitis?
+                                            </p>
+                                            <button class="btn btn-success"> <span
+                                                    class="fa fa-upload pr-2"></span>Upgrade your membership </button>
+                                        </div>
+
+                                    </li>
                                 </ol>
                             </div>
                         </div>
@@ -212,48 +284,60 @@
                             <h3 class="boXtitle">Collaborate with your agent & friends</h3>
                             <div id="chats">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-10">
+                                        <div class="msgItem recievedMsg">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius
+                                            consequatur?
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="msgItem sentMsg">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius
+                                            consequatur?
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
                                         <div class="msgItem recievedMsg">
                                             Helo, how are you?
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem sentMsg">
                                             I'm Good! Thanks for you asking! How about you?
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem recievedMsg">
                                             I am perfect. Thank you too.
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem sentMsg">
                                             Great
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem sentMsg">
                                             How can i help you?
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem recievedMsg">
                                             Well, I need to know the coming trips.
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem sentMsg">
-                                           Cool, give us some details to verification.
-                                           Name, Dob ?
+                                            Cool, give us some details to verification.
+                                            Name, Dob ?
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem recievedMsg">
                                             Well, Noor - 2/22/1996
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-10">
                                         <div class="msgItem sentMsg">
                                             Wait please, we are processing.
                                         </div>
@@ -261,7 +345,8 @@
                                 </div>
                             </div>
                             <form class="chatFormInput">
-                                <textarea class="form-control" rows="3" type="text" placeholder="Type your message..."></textarea>
+                                <textarea class="form-control" rows="3" type="text"
+                                    placeholder="Type your message..."></textarea>
                                 <input class="btn-theme-circle-default form-control fa fa-paper-clip" type="file" />
                                 <button class="btn-theme-circle-primary fa fa-paper-plane sendBtn"> </button>
                             </form>
@@ -271,66 +356,577 @@
                 <div class="col-md-6">
                     <div class="menubox">
                         <div class="alpha-color">
-                            <h3 class="boXtitle"> Build & share Itinerary</h3>
-                            <div class="bottomMenuGroup">
-                                <div class="buttonGroupMenuDropUp">
-                                    <ul>
-                                        <li>
-                                            <a href-="#">
-                                                <span class="fa fa-plane"></span>
-                                                <p class="menuCaption"> Flight</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href-="#">
-                                                <span class="fa fa-bed"></span>
-                                                <p class="menuCaption"> Acco..</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href-="#">
-                                                <span class="fa fa-subway"></span>
-                                                <p class="menuCaption"> Flight</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href-="#">
-                                                <span class="fa fa-chrome"></span>
-                                                <p class="menuCaption"> Flight</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                   
-                                <a class="btn-theme-circle-bdr btn-bottomMenuGroup" data-toggle="collapse" href="#" role="button" aria-expanded="false"
-                                    aria-controls="">
-                                    <span class="fa fa-plus"></span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    task
-                                </div>
+                            <h3 class="boXtitle"> Build & share Itinerary <a data-toggle="modal" data-target="#PrintPaper" href="#" title="Print"
+                                    class="fa fa-print print-btn"></a></h3>
+                            <div id="internaryBox">
 
-                            
-                            </div>
+                                <!-- Parent1 Item with date -->
+                                <ul class="internaryTasks">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- DATE ITEMS -->
+                                            <div class="dateTopTitles">
+                                                <h6> Wed, 23 Jan 2019</h6> 
+                                                <hr>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- ITEM 1 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ITEM 2 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                    
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                                <!-- Parent2 Item with date -->
+                                <ul class="internaryTasks">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- DATE ITEMS -->
+                                            <div class="dateTopTitles">
+                                                <h6> Wed, 23 Jan 2019</h6>
+                                                <hr>
+                                            </div>
+                                
+                                        </div>
+                                    </div>
+                                
+                                    <!-- ITEM 1 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ITEM 2 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ITEM 3 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                    
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                                <!-- Parent3 Item with date -->
+                                <ul class="internaryTasks">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- DATE ITEMS -->
+                                            <div class="dateTopTitles">
+                                                <h6> Wed, 23 Jan 2019</h6>
+                                                <hr>
+                                            </div>
+                                
+                                        </div>
+                                    </div>
+                                
+                                    <!-- ITEM 1 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ITEM 2 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ITEM 3 -->
+                                    <li class="internaryTask">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="media leftBox">
+                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <div class="media-body">
+                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Depart:</b> 12:00PM - <b>Arrive:</b>
+                                                                        12:00PM</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span>6hrs 45Minutes</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="media rightBox">
+                                
+                                                    <div class="media-body">
+                                                        <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span>Melb - Bangkok</span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1 para-prmy">
+                                                                    <span> $1200</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
+                                                    <a href="#" title="website link">
+                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        </span>
+                                                    </a>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="bottomMenuGroup">
+
+
+                            <a class="btn-theme-circle-bdr btn-bottomMenuGroup" title="show menu" data-toggle="collapse"
+                                href="#" role="button">
+                                <span class="fa fa-plus"></span>
+                            </a>
+
+
+
+                        </div>
+                        <div class="buttonGroupMenuDropUp">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-plane"></span>
+                                        <p class="menuCaption"> Flight</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-bed"></span>
+                                        <p class="menuCaption"> Acco..</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-subway"></span>
+                                        <p class="menuCaption"> Flight</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-chrome"></span>
+                                        <p class="menuCaption"> Flight</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="buttonGroupMenuDropUpForm">
+                            <ul>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">5</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Create new trip..."
+                                            aria-label="Create new trip..." aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"> <span
+                                                    class="fa fa-plus"></span></button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">5</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Create new trip..."
+                                            aria-label="Create new trip..." aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button"> <span
+                                                    class="fa fa-plus"></span></button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </li>
+
+                                <button class="btn btn-success closeForm"> Close</button>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
 
-    
+
     <!-- SCRIPTS -->
 
     <!-- JQUERRY -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    
+
     <!-- POPPER JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    
+
     <!-- BOOTSTRAP JS -->
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.bundle.js"></script>
@@ -338,4 +934,5 @@
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
