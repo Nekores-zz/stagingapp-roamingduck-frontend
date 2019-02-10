@@ -20,9 +20,47 @@
 </head>
 
 <body id="mainRoot" class="trip-dashboard">
+    <div class="tutorWrapper"></div>
+    <div class="modal fade" id="tutorStart" role="dialog" aria-labelledby="tutorStartTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="tutorStartTitle">Modal title</h5> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times; </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b> A Travel Assistant Will Join You Shortly!</b>
+                    </p>
+                    <p>
+                        Would you like to do a quick tutorial?
 
+                    </p>
+                    <br />
+                    <div class="float-right">
+                        <button class="btn btn-success pl-4 pr-4 tutorStartTitleYes">Yes</button>
+                        <button class="btn btn-light pl-4 pr-4 tutorStartTitleSkip">Skip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- NAVBAR COMPONENT -->
     <section id="navbarSection" class="bg-light">
+        <div id="navbarSectionTutorPopup">
+            <div class="navbarSectionTutorPopup-body">
+                <b class="float-right"> 2/3</b>
+                <h4> Heading</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+        
+                <button class="btn btn-light float-left btn-disable" id="navbarSectionTutorPopupNext"> Back</button>
+                <button class="btn btn-success float-right" id="navbarSectionTutorPopupSkip"> Next</button>
+            </div>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 mobileColShow">
@@ -32,14 +70,14 @@
                     <p class="tripBtn">
                         <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
-                            My Trips <span class="fa fa-eye"> </span>
+                            My Trips <!-- <span class="fa fa-eye"> </span>*/-->
                         </a>
 
                     </p>
                 </div>
-               <div class="col-sm-auto desktopColShow">
-                   <h2 class="DashboardTitle"> Trip Name</h2>
-               </div>
+                <div class="col-sm-auto desktopColShow">
+                    <h2 class="DashboardTitle"> Trip Name</h2>
+                </div>
                 <div class="col">
                     <ul class="tripUl text-right">
                         <li class="nav-item dropdown">
@@ -85,10 +123,10 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Modal Print -->
-                            <div class="modal fade" id="PrintPaper" tabindex="-1" role="dialog" aria-labelledby="PrintPaperTitle"
-                                aria-hidden="true">
+                            <div class="modal fade" id="PrintPaper" tabindex="-1" role="dialog"
+                                aria-labelledby="PrintPaperTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -102,7 +140,8 @@
                                                     <a href="#">Continue Print</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                                                    <a href="#" data-dismiss="modal" aria-label="Close">Cancel
+                                                        Request</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -111,7 +150,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="btn-theme-circle-primary btn-about" data-toggle="collapse" href="#AboutVersion"
+                            <a class="btn-theme-circle-bdr btn-about" data-toggle="collapse" href="#AboutVersion"
                                 role="button" aria-expanded="false" aria-controls="AboutVersion">
                                 <span class="fa fa-exclamation"></span>
                             </a>
@@ -344,20 +383,33 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="chatFormInput">
+                            <div class="chatFormInput">
+                                <div id="chatAreaTutorPopup">
+                                    <div class="chatAreaTutorPopup-body">
+                                        <b class="float-right"> 3/3</b>
+                                        <h4> Chatbox</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                
+                                        <button class="btn btn-light float-left btn-disable" id="chatAreaTutorPopupBack"> Back</button>
+                                        <button class="btn btn-success float-right" id="chatAreaTutorPopupFinish"> Finish</button>
+                                    </div>
+                                </div>
                                 <textarea class="form-control" rows="3" type="text"
                                     placeholder="Type your message..."></textarea>
                                 <input class="btn-theme-circle-default form-control fa fa-paper-clip" type="file" />
                                 <button class="btn-theme-circle-primary fa fa-paper-plane sendBtn"> </button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="menubox">
                         <div class="alpha-color">
-                            <h3 class="boXtitle"> Build & share Itinerary <a data-toggle="modal" data-target="#PrintPaper" href="#" title="Print"
-                                    class="fa fa-print print-btn"></a></h3>
+                            <h3 class="boXtitle"> Build & share Itinerary <a data-toggle="modal"
+                                    data-target="#PrintPaper" href="#" title="Print" class="fa fa-print print-btn"></a>
+                            </h3>
                             <div id="internaryBox">
 
                                 <!-- Parent1 Item with date -->
@@ -366,7 +418,7 @@
                                         <div class="col-12">
                                             <!-- DATE ITEMS -->
                                             <div class="dateTopTitles">
-                                                <h6> Wed, 23 Jan 2019</h6> 
+                                                <h6> Wed, 23 Jan 2019</h6>
                                                 <hr>
                                             </div>
 
@@ -434,7 +486,8 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -455,7 +508,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                    
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -471,19 +524,21 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                    
+
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                                
+
                                 <!-- Parent2 Item with date -->
                                 <ul class="internaryTasks">
                                     <div class="row">
@@ -493,16 +548,17 @@
                                                 <h6> Wed, 23 Jan 2019</h6>
                                                 <hr>
                                             </div>
-                                
+
                                         </div>
                                     </div>
-                                
+
                                     <!-- ITEM 1 -->
                                     <li class="internaryTask">
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -523,7 +579,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -539,13 +595,15 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                
+
                                                 </div>
                                             </div>
                                         </div>
@@ -555,7 +613,8 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -576,7 +635,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -592,13 +651,15 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                
+
                                                 </div>
                                             </div>
                                         </div>
@@ -608,7 +669,8 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -629,7 +691,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                    
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -645,19 +707,21 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                    
+
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                                
+
                                 <!-- Parent3 Item with date -->
                                 <ul class="internaryTasks">
                                     <div class="row">
@@ -667,16 +731,17 @@
                                                 <h6> Wed, 23 Jan 2019</h6>
                                                 <hr>
                                             </div>
-                                
+
                                         </div>
                                     </div>
-                                
+
                                     <!-- ITEM 1 -->
                                     <li class="internaryTask">
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-bed align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -697,7 +762,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -713,13 +778,15 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                
+
                                                 </div>
                                             </div>
                                         </div>
@@ -729,7 +796,8 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-plane align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -750,7 +818,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -766,13 +834,15 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                
+
                                                 </div>
                                             </div>
                                         </div>
@@ -782,7 +852,8 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="media leftBox">
-                                                    <span class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
+                                                    <span
+                                                        class="mainIco btn-theme-circle-default fa fa-subway align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -803,7 +874,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-                                
+
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -819,97 +890,111 @@
                                                         </ul>
                                                     </div>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                        <span
+                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
                                                     </a>
                                                     <a href="#" title="website link">
-                                                        <span class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-check-square-o align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-                                
+
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                        </div>
-                        <div class="bottomMenuGroup">
+                            </div>
+                            <div class="bottomMenuGroup" id="tutorBoxOne">
+                                <div id="bottomMenuGroupTutorPopup">
+                                   <div class="bottomMenuGroupTutorPopup-body">
+                                    <b class="float-right"> 1/3</b>
+                                        <h4> Heading</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+
+                                        <button class="btn btn-light float-left btn-disable" id="bottomMenuGroupTutorPopupNext"> Cancel</button>
+                                        <button class="btn btn-success float-right" id="bottomMenuGroupTutorPopupSkip"> Next</button>
+                                   </div>
+                                </div>
 
 
-                            <a class="btn-theme-circle-bdr btn-bottomMenuGroup" title="show menu" data-toggle="collapse"
-                                href="#" role="button">
-                                <span class="fa fa-plus"></span>
-                            </a>
+                                <a class="btn-theme-circle-bdr btn-bottomMenuGroup" title="show menu"
+                                    data-toggle="collapse" href="#" role="button">
+                                    <span class="fa fa-plus"></span>
+                                </a>
 
 
 
-                        </div>
-                        <div class="buttonGroupMenuDropUp">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <span class="fa fa-plane"></span>
-                                        <p class="menuCaption"> Flight</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="fa fa-bed"></span>
-                                        <p class="menuCaption"> Acco..</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="fa fa-subway"></span>
-                                        <p class="menuCaption"> Flight</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="fa fa-chrome"></span>
-                                        <p class="menuCaption"> Flight</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="buttonGroupMenuDropUpForm">
-                            <ul>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">5</span>
+                            </div>
+                            <div class="buttonGroupMenuDropUp">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span class="fa fa-plane"></span>
+                                            <p class="menuCaption"> Flight</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="fa fa-bed"></span>
+                                            <p class="menuCaption"> Acco..</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="fa fa-subway"></span>
+                                            <p class="menuCaption"> Flight</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="fa fa-chrome"></span>
+                                            <p class="menuCaption"> Flight</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="buttonGroupMenuDropUpForm">
+                                <ul>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">5</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Create new trip..."
+                                                aria-label="Create new trip..." aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"> <span
+                                                        class="fa fa-plus"></span></button>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Create new trip..."
-                                            aria-label="Create new trip..." aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"> <span
-                                                    class="fa fa-plus"></span></button>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">5</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Create new trip..."
+                                                aria-label="Create new trip..." aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"> <span
+                                                        class="fa fa-plus"></span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                </li>
-                                <li>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">5</span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Create new trip..."
-                                            aria-label="Create new trip..." aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button"> <span
-                                                    class="fa fa-plus"></span></button>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </li>
+                                        <br>
+                                    </li>
 
-                                <button class="btn btn-success closeForm"> Close</button>
+                                    <button class="btn btn-success closeForm"> Close</button>
 
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -918,16 +1003,17 @@
     <!-- SCRIPTS -->
 
     <!-- JQUERRY -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
     <!-- POPPER JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
     <!-- BOOTSTRAP JS -->
+    <script src="frameworks/jquery/jquery-2.1.0.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.bundle.js"></script>
 

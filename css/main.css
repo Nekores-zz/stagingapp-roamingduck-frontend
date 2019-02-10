@@ -1,7 +1,10 @@
 
 
+
+
 /* common */
 
+/* button */
 .btn-theme-circle-default{
 	border-radius: 50%;
 	background: rgba(51, 51, 51, 0.08);
@@ -59,6 +62,8 @@
 	box-shadow:0 0 0 0.2rem rgba(45, 174, 109, 0.25)
 	
 }
+
+/* a tag style */
 a{
 	text-decoration: none !important;
 }
@@ -66,6 +71,17 @@ a.focus{
 	outline: none !important;
 	border:none;
 }
+
+/* indexing style */
+.indexShow{
+	z-index: 2;
+}
+
+
+
+
+
+/* Custom CSS Started */
 
 
 #mainRoot{
@@ -75,7 +91,8 @@ a.focus{
 #navbarSection{
 	box-shadow: 1px 1px 10px #33333330;
     margin-bottom: 5px;
-    background: #36ad6f;
+	background: #36ad6f;
+	position: relative;
 }
 @media(max-width: 767px){
 	.desktopColShow{
@@ -184,7 +201,7 @@ box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
 /* ITERNARY ITEMS CSS */
 
 #bodyMain .menubox #internaryBox{
-	    height: calc(100vh - 278px);
+	height: calc(100vh - 285px);
     overflow: hidden;
     overflow-y: scroll;
     margin: 0 !important;
@@ -366,7 +383,7 @@ position: relative;
 
 #bodyMain .menubox .btn-bottomMenuGroup{
 	margin: 25px;
-	top: 30px;
+	top: 36px;
     left: 0;
 }
 /* #bodyMain .menubox .btn-bottomMenuGroup:focus .buttonGroupMenuDropUp{
@@ -522,7 +539,8 @@ position: relative;
 
 
 .chatFormInput{
-	position: absolute;
+	/* position: absolute; */
+	position: relative;
 	left:0;
 	bottom:0;
 	width:100%;
@@ -673,7 +691,7 @@ background-image:url('../img/user.jpg');
     border: 2px solid rgba(54, 173, 111, 0.44);
 }
 .bottomMenuGroup{
-	height: 86px;
+	height: 93px;
 background: white;
 position: absolute;
 width: 100%;
@@ -825,9 +843,217 @@ text-align: center;
 
 
 
+
+
+
+/* tutor */
+.tutorWrapper{
+	width: 100%;
+	z-index: 1;
+	top: 0;
+	
+}
+.tutorWrapper.TutorActive{
+	position: fixed;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.56);
+	z-index: 1;
+}
+
+#tutorStart{
+	display: block !important;
+	visibility: hidden;
+	transition: 1s all ease-in-out;
+	/* top: 100px; */
+	background: rgba(0, 0, 0, 0.56);
+}
+#tutorStart .modal-content{
+	transform: scale(0);
+	transition: 0.5s all ease-in-out;
+}
+
+#tutorStart.show .modal-content{
+	transform: scale(1);
+}
+#tutorStart.show{
+	visibility: visible !important;
+	
+
+}
+
+#tutorStart .modal-content {
+	border: none;
+border-radius: 12px;
+}
+#tutorStart .modal-content .modal-header{
+	border: none;
+	padding-bottom: 0;
+}
+
+
+/* tutorial 2/2 */
+#navbarSectionTutorPopup {
+ position: relative;
+ display: block;
+ text-align: left;
+ width: 100%;
+}
+
+
+#navbarSectionTutorPopup {
+	top: 118px;
+}
+
+#navbarSectionTutorPopup .navbarSectionTutorPopup-body{
+	position: absolute;
+	top: -50px;
+	width: 40%;
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transition: 0.5s all ease-in-out;
+	transform-origin: top;
+	transform: scale(0);
+}
+#navbarSectionTutorPopup .navbarSectionTutorPopup-body.navbarSectionTutorPopup-body-active{
+	
+	transform: scale(1) !important;
+	top: 0px !important;
+}
+#navbarSectionTutorPopup .navbarSectionTutorPopup-body::after{
+	content: '';
+background: red;
+height: 20px;
+width: 20px;
+position: absolute;
+top: -10px;
+left: 0;
+margin: auto;
+text-align: center;
+display: block;
+right: 0;
+transform: rotate(45deg);
+background: white;
+}
+
+
+/* tutorial 1/3  */
+#bottomMenuGroupTutorPopup{
+ position: relative;
+ display: block;
+ text-align: left;
+ width: 100%;
+}
+#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body{
+	position: absolute;
+	bottom: -150px;
+	width: 50%;
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transition: 0.5s all ease-in-out;
+	transform: scale(0);
+	
+}
+#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body.bottomMenuGroupTutorPopup-body-active{
+	bottom: 20px !important;
+	transform-origin: bottom;
+	transform: scale(1) !important;
+}
+
+
+#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body.bottomMenuGroupTutorPopup-body #bottomMenuGroupTutorPopupSkip{
+	cursor: pointer;
+}
+#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body::after{
+	content: '';
+background: red;
+height: 20px;
+width: 20px;
+position: absolute;
+bottom: -10px;
+left: 0;
+margin: auto;
+text-align: center;
+display: block;
+right: 0;
+transform: rotate(45deg);
+background: white;
+}
+
+
+/* tutorial 1/3  */
+#chatAreaTutorPopup{
+ position: relative;
+ display: block;
+ text-align: left;
+ width: 100%;
+}
+#chatAreaTutorPopup .chatAreaTutorPopup-body{
+	position: absolute;
+	bottom: -150px;
+	width: 50%;
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transition: 0.5s all ease-in-out;
+	transform: scale(0);
+	
+}
+#chatAreaTutorPopup .chatAreaTutorPopup-body.chatAreaTutorPopup-body-active{
+	bottom: 20px !important;
+	transform-origin: bottom;
+	transform: scale(1) !important;
+}
+
+
+#chatAreaTutorPopup .chatAreaTutorPopup-body.chatAreaTutorPopup-body #chatAreaTutorPopupSkip{
+	cursor: pointer;
+}
+#chatAreaTutorPopup .chatAreaTutorPopup-body::after{
+	content: '';
+background: red;
+height: 20px;
+width: 20px;
+position: absolute;
+bottom: -10px;
+left: 0;
+margin: auto;
+text-align: center;
+display: block;
+right: 0;
+transform: rotate(45deg);
+background: white;
+}
+
+
+
+
+
+
 /* MEDIA QUERIES */
 @media(min-width: 768px){
 	.UserProfile img{
 		margin: 0px 12px;
+	}
+	
+	
+}
+
+@media(max-width: 768px){
+	#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body, #navbarSectionTutorPopup .navbarSectionTutorPopup-body{
+		width: 80%;
+	}
+	#navbarSectionTutorPopup{
+		top: 215px !important;
 	}
 }
