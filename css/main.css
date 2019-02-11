@@ -153,12 +153,17 @@ a.focus{
 #bodyMain ol li{
 	list-style-type: none;
 }
+
 #bodyMain .dropdownCollapse{
-	position: absolute;
-	top: -4px;
-	left: 0;
-	width: 100%;
-	z-index: 1;
+	    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 30%;
+    z-index: 1;
+}
+#bodyMain .dropdownCollapse#invitationUserCollpase, #bodyMain .dropdownCollapse#AboutVersion{
+	right: 0;
+	left: inherit;
 }
 #bodyMain .dropdownCollapse .card{
 	border-radius: 0;
@@ -166,7 +171,7 @@ a.focus{
 	border-top: 1px solid #f1f1f1;
 	border-radius: 0px 0px 12px 12px;
 	background-color: #f2f2f2;
-margin: 15px;
+margin: 10px;
 margin-top: 0px;
 border: none;
 box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
@@ -218,16 +223,17 @@ box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
 #bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles h6{
 position: relative;
     left: 24px;
-    top: 8px;
+	top: 7px;
+	line-height: 10px;
     margin: 0;
     background: white;
     width: fit-content;
     border: 1px solid #d6d5ce;
     border-radius: 20px;
 	padding: 2px 6px;
-	    color: #b6b6b6;
+	    color: #36ad6f;
     font-weight: 400;
-    font-size: 7px;
+    font-size: 8px;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles hr{
 	margin: 0;
@@ -239,19 +245,60 @@ position: relative;
 	padding: 10px;
 	border-radius: 12px;
 	box-shadow: 1px 1px 3px #3333332e;
-    /* margin: 0 !important; */
+	/* margin: 0 !important; */
+	/* transform: scale(1); */
+	transition: 0.5s all ease-in-out;
+	cursor: pointer;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask:hover{
+ /* transform: scale(1.01); */
+ box-shadow: 1px 1px 10px #33333352;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco{
 	/* color: red; */
 	padding: 10px;
-	    width: 36px;
+	width: 36px;
     /* margin: 0 !important; */
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco.attachementConfirm::after{
+content: '';
+background:red;
+position: absolute;
+top: 0;
+right: 0;
+border-radius: 50%;
+height: 12px;
+width: 12px;
+border: 1px solid white;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox{
 	border-right: 1px solid #e3e3e3;
 }
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco{
+	padding: 8px 22px;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco::before{
+	    position: relative;
+	left: -9px;
+	margin: 0;
+}
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .innerContentLists li, #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .innerContentLists li{
 	list-style-type: none;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .notes-btn{
+	    position: relative;
+    top: 12px;
+    right: 6px;
+    font-size: 12px;
+    color: #2dae6d;
+	font-weight: 500;
+	opacity: 0;
+	transform: scale(0);
+	transition: 0.5s all ease-in-out;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask:hover .rightBox .notes-btn{
+	transform: scale(1);
+	opacity: 1;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists {
 	/* background:red; */
@@ -351,6 +398,10 @@ position: relative;
 #bodyMain .menubox .buttonGroupMenuDropUp ul li a{
 	color: #36ad6f;
 }
+#bodyMain .menubox .buttonGroupMenuDropUp ul li a span::before{
+	font-size: 30px;
+	margin: 0;
+}
 #bodyMain .boXtitle{
 	margin:0;
 	position: relative;
@@ -364,17 +415,29 @@ position: relative;
 }
 #bodyMain .boXtitle .print-btn{
 	padding: 6px;
-	background: #36ad6f;
+	background: #eee;
 	border-radius: 50%;
 	float: right;
-	color: white;
+	color: #36ad6f;
 	position: absolute;
 	top: 6px;
 	right: 9px;
 	transition: 0.5s all ease-in-out;
 }
+#bodyMain .boXtitle .filter-btn{
+	padding: 6px 7px 6px 8px;
+	background: #eee;
+	border-radius: 50%;
+	float: right;
+	color: #36ad6f;
+	position: absolute;
+	top: 6px;
+	right: 45px;
+	
+	transition: 0.5s all ease-in-out;
+}
 
-#bodyMain .boXtitle .print-btn:hover, #bodyMain .boXtitle .print-btn:focus{
+#bodyMain .boXtitle .print-btn:hover, #bodyMain .boXtitle .print-btn:focus,#bodyMain .boXtitle .filter-btn:hover, #bodyMain .boXtitle .filter-btn:focus{
 	outline: none;
 	box-shadow:0 0 0 0.2rem rgba(45, 174, 109, 0.25)
 	
@@ -399,6 +462,20 @@ position: relative;
 }
 
 
+#attachementsShow .attachmentItem{
+	background: #eee;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+#attachementsShow .attachmentItem .attachmentBtnGroup{
+	    position: relative;
+    top: -5px;
+}
+#attachementsShow .attachmentItem .attachmentBtnGroup span{
+	padding: 0px 2px;
+
+}
 #mainRoot .dropdown a.UserProfile::after{
     display: none;
 }
@@ -496,7 +573,23 @@ position: relative;
 
 .invitationJumbor .jumbotron{
 	background-color: transparent;
+	padding: 0;
 }
+		.invitationJumbor .jumbotron .UserList{
+			padding: 0;
+		}
+		.invitationJumbor .jumbotron .UserList li{
+			display: inline-block;
+			margin-right: 6px;
+		}
+		.invitationJumbor .jumbotron .UserList li a img{
+			border-radius: 50%;
+			transition: 0.5s all ease-in-out;
+			
+		}
+				.invitationJumbor .jumbotron .UserList li a img:hover{
+					box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
+				}
 
 .tripBtn{
 	margin: 0;
@@ -618,14 +711,51 @@ padding-bottom: 30px;
 
 }
 .msgItem{
-border-radius: 12px;
-padding: 10px;
-margin: 20px;
-position: relative;
-top: 0;
-font-size: 14px;
-letter-spacing: 0.2px;
-
+	border-radius: 12px;
+	padding: 10px;
+	margin: 20px;
+	position: relative;
+	top: 0;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	
+}
+.msgItem .usernameText{
+position: absolute;
+top: -18px;
+left: 0px;
+font-size: 10px;
+font-weight: 500;
+color: #36ad6f;
+}
+.msgItem .attachmentFileChat{
+	padding: 6px 8px;
+	/* position: absolute; */
+	
+	width: fit-content;
+	/* background: red; */
+	margin: 10px 0px 0px 0px;
+	position: relative;
+	background: #eee;
+	color: #36ad6f;
+	border-radius: 12px 0px 0px 12px;
+}
+.msgItem .attachmentFileChat span.fa-download{
+	padding: 9.5px;
+	position: absolute;
+	background: #eee;
+	top: 0;
+	right: -31px;
+	color: #36ad6f;
+	border-radius: 0px 12px 12px 0px;
+}
+.msgItem .timeStamp{
+position: absolute;
+top: 12px;
+right: -37px;
+font-size: 10px;
+color: #9d9d9d;
+font-weight: 400;
 }
 /* .recievedMsg::after{
 	content: '';
@@ -643,6 +773,8 @@ border-right: 10px solid transparent;
 border-radius: 12px 12px 12px 12px;
 box-shadow: 1px 1px 3px #3333332e;
 left: 40px;
+    top: 20px;
+    margin-bottom: 20px;
 }
 .recievedMsg::before{
 	    
@@ -650,13 +782,14 @@ left: 40px;
 	content: '';
 position: absolute;
 left: -48px;
-top: 0px;
+top: -18px;
 border-radius: 50%;
 height: 42px;
 	width: 42px;
 	background-size: cover;
 background-image:url('../img/bg.jpg');
 border: 2px solid rgba(54, 173, 111, 0.44);
+
 }
 
 .sentMsg{
@@ -665,6 +798,8 @@ border: 2px solid rgba(54, 173, 111, 0.44);
 	font-weight: 100;
 	display: inline-block;
 left: 40px;
+    top: 20px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 3px #3333332e;
 }
 /* .sentMsg::after{
@@ -682,7 +817,7 @@ border-right: 10px solid transparent;
 	    content: '';
     position: absolute;
     left: -48px;
-    top: 0;
+    top: -18px;
     border-radius: 50%;
     height: 42px;
 	width: 42px;
@@ -692,14 +827,28 @@ background-image:url('../img/user.jpg');
 }
 .bottomMenuGroup{
 	height: 93px;
-background: white;
-position: absolute;
-width: 100%;
-bottom: 0;
-border:0;
-box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
-border-radius: 0px 0px 12px 12px;
-text-align: center;
+	background: white;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	border:0;
+	box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+	border-radius: 0px 0px 12px 12px;
+	text-align: center;
+}
+.bottomMenuGroup .PriceBox{
+	text-align: right;
+	padding-right: 30px;
+	
+}
+.bottomMenuGroup .PriceBox h5{
+	font-size: 15px;
+	    margin: 0;
+    position: relative;
+	top: 8px;
+	color: #36ad6f;
+
+	
 }
 
 
@@ -1052,6 +1201,9 @@ background: white;
 @media(max-width: 768px){
 	#bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body, #navbarSectionTutorPopup .navbarSectionTutorPopup-body{
 		width: 80%;
+	}
+	#bodyMain .dropdownCollapse{
+		width: 100%;
 	}
 	#navbarSectionTutorPopup{
 		top: 215px !important;
