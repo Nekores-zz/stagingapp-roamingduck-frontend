@@ -53,14 +53,14 @@
     <section id="navbarSection" class="bg-light">
         <div id="navbarSectionTutorPopup">
             <div class="navbarSectionTutorPopup-body">
-                <b class="float-right"> 2/3</b>
-                <h4> Heading</h4>
+                <b class="float-right"> 3/3</b>
+                <h4> Topbar</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 </p>
 
-                <button class="btn btn-light float-left btn-disable" id="navbarSectionTutorPopupNext"> Back</button>
-                <button class="btn btn-success float-right" id="navbarSectionTutorPopupSkip"> Next</button>
+                <button class="btn btn-light float-left btn-disable" id="navbarSectionTutorPopupBack"> Back</button>
+                <button class="btn btn-success float-right" id="navbarSectionTutorPopupFinish"> Finish</button>
             </div>
         </div>
         <div class="container-fluid">
@@ -68,7 +68,7 @@
                 <div class="col-12 mobileColShow">
                     <h2 class="DashboardTitle"> Trip Name</h2>
                 </div>
-                <div class="col">
+                <div class="col pr-0">
                     <p class="tripBtn">
                         <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
@@ -110,13 +110,10 @@
                                         <div class="modal-body">
                                             <ul>
                                                 <li>
-                                                    <a href="#">Profile</a>
-                                                </li>
-                                                <li>
                                                     <a href="#">Edit Profile</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Help</a>
+                                                    <a href="#" id="showTutorialButtn">Tutorial</a>
                                                 </li>
                                                 <li>
                                                     <a href="#">Logout</a>
@@ -614,16 +611,16 @@
                             <div class="chatFormInput">
                                 <div id="chatAreaTutorPopup">
                                     <div class="chatAreaTutorPopup-body">
-                                        <b class="float-right"> 3/3</b>
+                                        <b class="float-right"> 1/3</b>
                                         <h4> Chatbox</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                         </p>
 
                                         <button class="btn btn-light float-left btn-disable"
-                                            id="chatAreaTutorPopupBack"> Back</button>
-                                        <button class="btn btn-success float-right" id="chatAreaTutorPopupFinish">
-                                            Finish</button>
+                                            id="chatAreaTutorPopupCancel"> Cancel</button>
+                                        <button class="btn btn-success float-right" id="chatAreaTutorPopupNext">
+                                            Next</button>
                                     </div>
                                 </div>
                                 <textarea class="form-control" rows="3" type="text"
@@ -637,11 +634,42 @@
                 <div class="col-md-6">
                     <div class="menubox">
                         <div class="alpha-color">
-                            <h3 class="boXtitle"> Build & share Itinerary <a data-toggle="modal"
+                            <h3 class="boXtitle"> Build & share Itinerary <span>12/12/19 – 01/01/20</span><a data-toggle="modal"
                                     data-target="#PrintPaper" href="#" title="Print" class="fa fa-print print-btn"></a>
-                                <a data-toggle="modal" data-target="#" href="#" title="Print"
+                                <a data-toggle="collapse" href="#showFiltersCollpase" role="button"
+                                    aria-expanded="false" aria-controls="showFiltersCollpase"
                                     class="fa fa-filter filter-btn"></a>
                             </h3>
+                            <div class="collapse filtersIternaryBox" id="showFiltersCollpase">
+                                <div class="contentBoxes">
+                                    <h6>Apply Filter</h6>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Flight</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Accomodation</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Activity</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Transport</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox" checked>
+                                            All</label>
+                                    </div>
+                                </div>
+                            </div>
                             <div id="internaryBox">
 
                                 <!-- Parent1 Item with date -->
@@ -665,7 +693,6 @@
                                                     <span
                                                         class="mainIco btn-theme-circle-default flaticon-travel align-self-center mr-2"></span>
                                                     <div class="media-body">
-                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
@@ -687,6 +714,11 @@
 
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Flight to UA</b></span>
+                                                                </p>
+                                                            </li>
                                                             <li>
                                                                 <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
@@ -704,18 +736,17 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link" data-toggle="modal"
+                                                    <a href="#" class="website link" data-toggle="modal"
                                                         data-target="#attachementsShow" data-toggle="modal"
                                                         data-target="#attachementsShow">
                                                         <span
-                                                            class="mainIco attachementConfirm btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco attachementConfirm btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -728,7 +759,6 @@
                                                     <span
                                                         class="mainIco btn-theme-circle-default flaticon-road-perspective align-self-center mr-2"></span>
                                                     <div class="media-body">
-                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
@@ -747,9 +777,13 @@
                                             </div>
                                             <div class="col">
                                                 <div class="media rightBox">
-
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
+                                                            <li>
+                                                                <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
                                                             <li>
                                                                 <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
@@ -767,16 +801,15 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
+                                                    <a href="#" class="website link">
                                                         <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -804,7 +837,6 @@
                                                     <span
                                                         class="mainIco btn-theme-circle-default flaticon-accomodation align-self-center mr-2"></span>
                                                     <div class="media-body">
-                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
@@ -828,6 +860,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -843,16 +880,15 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
+                                                    <a href="#" class="website link">
                                                         <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -889,6 +925,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -904,17 +945,16 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link" data-toggle="modal"
+                                                    <a href="#" class="website link" data-toggle="modal"
                                                         data-target="#attachementsShow">
                                                         <span
-                                                            class="mainIco attachementConfirm btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco attachementConfirm btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -951,6 +991,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -966,16 +1011,15 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
+                                                    <a href="#" class="website link">
                                                         <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1003,7 +1047,6 @@
                                                     <span
                                                         class="mainIco btn-theme-circle-default flaticon-accomodation align-self-center mr-2"></span>
                                                     <div class="media-body">
-                                                        <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
@@ -1027,6 +1070,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -1042,17 +1090,16 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link" data-toggle="modal"
+                                                    <a href="#" class="website link" data-toggle="modal"
                                                         data-target="#attachementsShow">
                                                         <span
-                                                            class="mainIco attachementConfirm btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco attachementConfirm btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1089,6 +1136,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -1104,18 +1156,16 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link" data-toggle="modal"
+                                                    <a href="#" class="website link" data-toggle="modal"
                                                         data-target="#attachementsShow">
                                                         <span
-                                                            class="mainIco attachementConfirm btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco attachementConfirm btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1152,6 +1202,11 @@
                                                         <ul class="innerContentLists">
                                                             <li>
                                                                 <p class="para-1">
+                                                                    <span><b>Title to task</b></span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="para-1">
                                                                     <span>Melb - Bangkok</span>
                                                                 </p>
                                                             </li>
@@ -1167,17 +1222,16 @@
                                                             Notes
                                                         </span>
                                                     </a>
-                                                    <a href="#" title="website link">
-                                                        <span
-                                                            class="mainIco btn-theme-circle-default fa fa-globe align-self-center mt-2 mr-1"></span>
-                                                    </a>
-                                                    <a href="#" title="website link" data-toggle="modal"
+                                                    <a href="#" class="website link" data-toggle="modal"
                                                         data-target="#attachementsShow">
                                                         <span
-                                                            class="mainIco attachementConfirm btn-theme-circle-primary fa fa-paperclip align-self-center mt-2 mr-1">
+                                                            class="mainIco attachementConfirm btn-theme-circle-default fa fa-paperclip align-self-center mt-2 mr-1">
                                                         </span>
                                                     </a>
-
+                                                    <a href="#" class="website link">
+                                                        <span
+                                                            class="mainIco btn-theme-circle-primary fa fa-globe align-self-center mt-2 mr-1"></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1187,31 +1241,25 @@
                             <div class="bottomMenuGroup" id="tutorBoxOne">
                                 <div id="bottomMenuGroupTutorPopup">
                                     <div class="bottomMenuGroupTutorPopup-body">
-                                        <b class="float-right"> 1/3</b>
-                                        <h4> Heading</h4>
+                                        <b class="float-right"> 2/3</b>
+                                        <h4> Itinerary Section</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                         </p>
-
                                         <button class="btn btn-light float-left btn-disable"
-                                            id="bottomMenuGroupTutorPopupNext"> Cancel</button>
-                                        <button class="btn btn-success float-right" id="bottomMenuGroupTutorPopupSkip">
+                                            id="bottomMenuTutorPopupBack"> Back</button>
+                                        <button class="btn btn-success float-right" id="bottomMenuTutorPopupNext">
                                             Next</button>
                                     </div>
                                 </div>
-
-
                                 <a class="btn-theme-circle-bdr btn-bottomMenuGroup" title="show menu"
                                     data-toggle="collapse" href="#" role="button">
                                     <span class="fa fa-plus"></span>
-                                    
+
                                 </a>
                                 <div class="PriceBox">
                                     <h5> $1200.6</h5>
                                 </div>
-
-
-
                             </div>
                             <div class="buttonGroupMenuDropUp">
                                 <ul>
