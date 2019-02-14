@@ -1289,38 +1289,51 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="buttonGroupMenuDropUpForm">
-                                <ul>
-                                    <li>
-                                        <div class="input-group">
-
-                                            <input type="text" class="form-control" placeholder="Create new trip..."
-                                                aria-label="Create new trip..." aria-describedby="basic-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-success" type="button"> <span
-                                                        class="fa fa-plus"></span></button>
-
-                                            </div>
+                            <div class="buttonGroupMenuopUpForm">
+                                <!-- multistep form -->
+                                <form id="msform" class="buttonGroupMenuDropUpForm">
+                                    <button type="button" class="close closeBtnCross">
+                                        <span aria-hidden="true">&times; </span>
+                                    </button>
+                                    <!-- progressbar -->
+                                    <ul id="progressbar">
+                                        <li class="active">Time</li>
+                                        <li>Locations</li>
+                                        <li>Other</li>
+                                    </ul>
+                                    <!-- fieldsets -->
+                                    <fieldset>
+                                        <div class="input-group mb-2">
+                                            <input class="form-control" type="text" name="Departure Date" placeholder="Departure Date" required/>
+                                            <input class="form-control" type="text" name="Depart Time" placeholder="Depart Time" />
                                         </div>
-                                        <br>
-                                    </li>
-                                    <li>
-                                        <div class="input-group">
-
-                                            <input type="text" class="form-control" placeholder="Create new trip..."
-                                                aria-label="Create new trip..." aria-describedby="basic-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-success" type="button"> <span
-                                                        class="fa fa-plus"></span></button>
-                                            </div>
-
+                                        <div class="input-group mb-4">
+                                            <input class="form-control" type="text" name="Flight duration" placeholder="Flight duration" />
+                                            <input class="form-control" type="text" name="cpass" placeholder="Arrival Time" />
                                         </div>
-                                        <br>
-                                    </li>
-
-                                    <button class="btn btn-success closeForm"> Close</button>
-
-                                </ul>
+                                        <input type="button" name="next" class="next btn btn-success" value="Next" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="input-group mb-4">
+                                            <input class="form-control" type="text" name="From" placeholder="From" />
+                                            <input class="form-control" type="text" name="To" placeholder="To" />
+                                        </div>
+                                        <input type="button" name="previous" class="previous btn btn-light" value="Previous" />
+                                        <input type="button" name="next" class="next btn btn-success" value="Next" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="input-group mb-2">
+                                            <input class="form-control" type="text" name="Total cost" placeholder="Total cost" />
+                                            <input class="form-control" type="text" name="URL" placeholder="URL" />
+                                        </div>
+                                        <div class="input-group mb-4">
+                                            <textarea class="form-control" rows="2" placeholder="Notes"></textarea>
+                                        </div>
+                                        <input type="button" name="previous" class="previous btn btn-light" value="Previous" />
+                                        <input type="submit" name="submit" class="submit btn btn-success" value="Submit" />
+                                        <input type="button" name="submit" class="closeForm btn btn-danger" value="Close" />
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -1345,6 +1358,7 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="frameworks/jquery/jquery-2.1.0.min.js"></script>
+    <script src="frameworks/jquery/jquery-easing.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.bundle.js"></script>
 
