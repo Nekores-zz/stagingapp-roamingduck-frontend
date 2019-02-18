@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 11/02/2019 12:50
+    Creation date: 15/02/2019 09:06
     */
 
     @font-face {
@@ -37,26 +37,14 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-accomodation:before { content: "\f100"; }
-.flaticon-plane:before { content: "\f101"; }
-.flaticon-travel:before { content: "\f102"; }
-.flaticon-turn-notifications-on-button:before { content: "\f103"; }
-.flaticon-man-in-office-desk-with-computer:before { content: "\f104"; }
-.flaticon-working-with-laptop:before { content: "\f105"; }
-.flaticon-road-perspective:before { content: "\f106"; }
-.flaticon-bus-side-view:before { content: "\f107"; }
-.flaticon-logistics-delivery-truck-in-movement:before { content: "\f108"; }
-.flaticon-support:before { content: "\f109"; }
-.flaticon-contact:before { content: "\f10a"; }
+    .flaticon-plane:before { content: "\f100"; }
+.flaticon-info:before { content: "\f101"; }
+.flaticon-bed:before { content: "\f102"; }
+.flaticon-train:before { content: "\f103"; }
+.flaticon-tourist:before { content: "\f104"; }
     
-    $font-Flaticon-accomodation: "\f100";
-    $font-Flaticon-plane: "\f101";
-    $font-Flaticon-travel: "\f102";
-    $font-Flaticon-turn-notifications-on-button: "\f103";
-    $font-Flaticon-man-in-office-desk-with-computer: "\f104";
-    $font-Flaticon-working-with-laptop: "\f105";
-    $font-Flaticon-road-perspective: "\f106";
-    $font-Flaticon-bus-side-view: "\f107";
-    $font-Flaticon-logistics-delivery-truck-in-movement: "\f108";
-    $font-Flaticon-support: "\f109";
-    $font-Flaticon-contact: "\f10a";
+    $font-Flaticon-plane: "\f100";
+    $font-Flaticon-info: "\f101";
+    $font-Flaticon-bed: "\f102";
+    $font-Flaticon-train: "\f103";
+    $font-Flaticon-tourist: "\f104";

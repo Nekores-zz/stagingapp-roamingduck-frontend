@@ -50,6 +50,11 @@
         </div>
     </div>
     <!-- NAVBAR COMPONENT -->
+    <div id="mobileNavShowHide">
+        <div class="box-button-mobile-show-top ">
+            <span class="fa fa-angle-down angleIcon"></span>
+        </div>
+    </div>
     <section id="navbarSection" class="bg-light">
         <div id="navbarSectionTutorPopup">
             <div class="navbarSectionTutorPopup-body">
@@ -395,8 +400,20 @@
         <!-- </div> -->
         <!-- </div> -->
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row mobileversionTabNav">
+                <div class="col-md-12">
+                    <nav>
+                        <div class="mobileversionTabContent nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="chattab-tab" data-toggle="tab" href="#chattab" role="tab"
+                                aria-controls="chattab" aria-selected="true">chat</a>
+                            <a class="nav-item nav-link" id="itinerarytab-tab" data-toggle="tab" href="#itinerarytabtab" role="tab"
+                                aria-controls="itinerarytab" aria-selected="false">Itinerary</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>   
+            <div class="row tab-content">
+                <div class="col-md-6 tab1" id="chattab" role="tabpanel" aria-labelledby="chattab-tab">
                     <div class="chatbox">
                         <div class="alpha-color">
                             <h3 class="boXtitle">Collaborate with your agent & friends</h3>
@@ -631,7 +648,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 tab2" id="itinerarytabtab" role="tabpanel" aria-labelledby="itinerarytabtab-tab">
                     <div class="menubox">
                         <div class="alpha-color">
                             <h3 class="boXtitle"> Build & share Itinerary <span>12/12/19 – 01/01/20</span><a data-toggle="modal"
@@ -691,7 +708,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-travel align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-plane align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -757,7 +774,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-road-perspective align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-train align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -835,7 +852,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-accomodation align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-bed align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -899,7 +916,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-travel align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-plane align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -965,7 +982,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-road-perspective align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-train align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -1045,7 +1062,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-accomodation align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-bed align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <ul class="innerContentLists">
                                                             <li>
@@ -1110,7 +1127,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-travel align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-plane align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -1176,7 +1193,7 @@
                                             <div class="col">
                                                 <div class="media leftBox">
                                                     <span
-                                                        class="mainIco btn-theme-circle-default flaticon-road-perspective align-self-center mr-2"></span>
+                                                        class="mainIco btn-theme-circle-default flaticon-train align-self-center mr-2"></span>
                                                     <div class="media-body">
                                                         <!-- <h5 class="mt-0">Center-aligned media</h5> -->
                                                         <ul class="innerContentLists">
@@ -1265,26 +1282,32 @@
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <span class="flaticon-travel"></span>
+                                            <span class="flaticon-plane"></span>
                                             <p class="menuCaption"> Flight</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <span class="flaticon-accomodation"></span>
+                                            <span class="flaticon-bed"></span>
                                             <p class="menuCaption"> Acco..</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <span class="flaticon-road-perspective"></span>
+                                            <span class="flaticon-train"></span>
                                             <p class="menuCaption"> Trans..</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <span class="flaticon-man-in-office-desk-with-computer"></span>
+                                            <span class="flaticon-tourist"></span>
                                             <p class="menuCaption"> Activity</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="flaticon-info"></span>
+                                            <p class="menuCaption"> Info</p>
                                         </a>
                                     </li>
                                 </ul>
@@ -1304,20 +1327,39 @@
                                     <!-- fieldsets -->
                                     <fieldset>
                                         <div class="input-group mb-2">
-                                            <input class="form-control" type="text" name="Departure Date" placeholder="Departure Date" required/>
-                                            <input class="form-control" type="text" name="Depart Time" placeholder="Depart Time" />
+                                            
+                                                <input class="form-control departureDate" type="text" name="DepartureDate" placeholder="Departure Date" required="required"> 
+                                                    <span class="fa fa-calendar-o float-right famInputIco"></span>
+                                                </input>
+                                                <input class="form-control" type="text" name="Flight duration" placeholder="Flight duration">
+                                                <span class="fa fa-hourglass-end float-right famInputIco"></span>
+                                                </input>
+                                                
                                         </div>
                                         <div class="input-group mb-4">
-                                            <input class="form-control" type="text" name="Flight duration" placeholder="Flight duration" />
-                                            <input class="form-control" type="text" name="cpass" placeholder="Arrival Time" />
+                                            
+                                            <input class="form-control" type="text" name="Depart Time" placeholder="Depart Time">
+                                            <span class="fa fa-clock-o float-right famInputIco"></span>
+                                            </input>
+                                            <input class="form-control" type="text" name="cpass" placeholder="Arrival Time" >
+                                                <span class="fa fa-clock-o float-right famInputIco"></span>
+                                            </input>
                                         </div>
-                                        <input type="button" name="next" class="next btn btn-success" value="Next" />
+                                        <br/>
+                                        <input type="button" name="next" class="next btn btn-success departureDateValid" value="Next" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="input-group mb-4">
-                                            <input class="form-control" type="text" name="From" placeholder="From" />
-                                            <input class="form-control" type="text" name="To" placeholder="To" />
+                                            <input class="form-control" type="text" name="From" placeholder="From" >
+                                                <span class="fa fa-map-marker float-right famInputIco"></span>
+                                            </input>
+                                            <input class="form-control" type="text" name="To" placeholder="To">
+                                                <span class="fa fa-map-marker float-right famInputIco"></span>
+                                            </input>
                                         </div>
+                                        <br />
+                                        <br />
+                                        <br />
                                         <input type="button" name="previous" class="previous btn btn-light" value="Previous" />
                                         <input type="button" name="next" class="next btn btn-success" value="Next" />
                                     </fieldset>
@@ -1327,11 +1369,12 @@
                                             <input class="form-control" type="text" name="URL" placeholder="URL" />
                                         </div>
                                         <div class="input-group mb-4">
-                                            <textarea class="form-control" rows="2" placeholder="Notes"></textarea>
+                                            <textarea class="form-control" rows="2" placeholder="Notes" style="padding-right:55px; z-index:0; resize: none"></textarea>
+                                            <input class="btn-theme-circle-default form-control fa fa-paperclip" type="file">
                                         </div>
                                         <input type="button" name="previous" class="previous btn btn-light" value="Previous" />
                                         <input type="submit" name="submit" class="submit btn btn-success" value="Submit" />
-                                        <input type="button" name="submit" class="closeForm btn btn-danger" value="Close" />
+                                        <!-- <input type="button" name="submit" class="closeForm btn btn-danger" value="Close" /> -->
                                     </fieldset>
                                 </form>
                             </div>

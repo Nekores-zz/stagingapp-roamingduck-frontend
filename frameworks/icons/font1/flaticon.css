@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 15/02/2019 09:06
+  	Creation date: 11/02/2019 12:50
   	*/
 
 @font-face {
@@ -30,8 +30,14 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-plane:before { content: "\f100"; }
-.flaticon-info:before { content: "\f101"; }
-.flaticon-bed:before { content: "\f102"; }
-.flaticon-train:before { content: "\f103"; }
-.flaticon-tourist:before { content: "\f104"; }
+.flaticon-accomodation:before { content: "\f100"; }
+.flaticon-plane:before { content: "\f101"; }
+.flaticon-travel:before { content: "\f102"; }
+.flaticon-turn-notifications-on-button:before { content: "\f103"; }
+.flaticon-man-in-office-desk-with-computer:before { content: "\f104"; }
+.flaticon-working-with-laptop:before { content: "\f105"; }
+.flaticon-road-perspective:before { content: "\f106"; }
+.flaticon-bus-side-view:before { content: "\f107"; }
+.flaticon-logistics-delivery-truck-in-movement:before { content: "\f108"; }
+.flaticon-support:before { content: "\f109"; }
+.flaticon-contact:before { content: "\f10a"; }

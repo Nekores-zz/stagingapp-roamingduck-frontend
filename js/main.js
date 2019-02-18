@@ -1,3 +1,13 @@
+
+
+
+// navbar
+$('#mobileNavShowHide').on('click', function(){
+    $('.box-button-mobile-show-top').toggleClass('showNavPanelShowButton');
+    $('.angleIcon').toggleClass('rotateangleIcon')
+    $('#navbarSection').toggleClass('showNavPanel');
+});
+
 $('.btn-bottomMenuGroup').on('click',()=>{
     $('.buttonGroupMenuDropUp ul').toggleClass("showMenudropUp"); 
 });
@@ -11,10 +21,15 @@ $('.buttonGroupMenuDropUpForm input.closeForm , .buttonGroupMenuDropUpForm butto
     $('.buttonGroupMenuDropUp ul').toggleClass("showMenudropUp");
 })
 
+if ($(window).width() < 768) {
+    $('.tab1').addClass('tab-pane show active');
+    $('.tab2').addClass('tab-pane');
+}
+
 // ON DOCUMENT LOAD
 $(document).ready(function () {
 
-
+    
     // turtorial popup and wrapper
     function showTutorial(){
         // TUTORIAL YES OR SKIP MODAL
@@ -113,7 +128,11 @@ $(document).ready(function () {
     }
 
     // on window load
-    showTutorial();
+    
+
+    if ($(window).width() > 768) {
+        showTutorial();
+    }
 
 
 
@@ -139,10 +158,19 @@ $(document).ready(function () {
 
 
 
-
-
-
-// 
+// form validation
+// // $("input").removeClass('next');
+// $("input.departureDate").keypress(function (e) {
+//     if (this.value == '') {
+//         // alert("null")
+//         // $("input.departureDate").removeClass('next');
+//         return 0;
+//     }
+//     else {
+//         alert(1)
+//         $("input.departureDateValid").addClass('next');
+//     }
+// });
 
 
 //jQuery time
@@ -151,41 +179,58 @@ var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function () {
-    if (animating) return false;
-    animating = true;
+    var z = $("input.departureDate").val();
+    if(z == ''){
+        $("input.departureDate").css({
+            'box-shadow': '0 0 0 .2rem rgba(255, 12, 25, 0.49)',
+            'z-index': '1'
+        });
+    }
+    else{
+        $("input.departureDate").css({
+            'box-shadow': 'rgba(4, 170, 26, 0.49) 0px 0px 0px 0.2rem',
+            'z-index': '1'
+        })
+        
+        if (animating) return false;
+        animating = true;
 
-    current_fs = $(this).parent();
-    next_fs = $(this).parent().next();
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
 
-    //activate next step on progressbar using the index of next_fs
-    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-    //show the next fieldset
-    next_fs.show();
-    //hide the current fieldset with style
-    current_fs.animate({ opacity: 0 }, {
-        step: function (now, mx) {
-            //as the opacity of current_fs reduces to 0 - stored in "now"
-            //1. scale current_fs down to 80%
-            scale = 1 - (1 - now) * 0.2;
-            //2. bring next_fs from the right(50%)
-            left = (now * 50) + "%";
-            //3. increase opacity of next_fs to 1 as it moves in
-            opacity = 1 - now;
-            current_fs.css({
-                'transform': 'scale(' + scale + ')',
-                'position': 'absolute'
-            });
-            next_fs.css({ 'left': left, 'opacity': opacity });
-        },
-        duration: 800,
-        complete: function () {
-            current_fs.hide();
-            animating = false;
-        },
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-    });
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({ opacity: 0 }, {
+            step: function (now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50) + "%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+                    'transform': 'scale(' + scale + ')',
+                    'position': 'absolute'
+                });
+                next_fs.css({ 'left': left, 'opacity': opacity });
+            },
+            duration: 800,
+            complete: function () {
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+}
+
+
+    
 });
 
 $(".previous").click(function () {
@@ -225,6 +270,10 @@ $(".previous").click(function () {
 
 $(".submit").click(function () {
     // return false;
-})
+});
+
+
+
+
 
 
