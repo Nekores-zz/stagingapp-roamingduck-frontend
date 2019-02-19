@@ -22,8 +22,8 @@ $('.buttonGroupMenuDropUpForm input.closeForm , .buttonGroupMenuDropUpForm butto
 })
 
 if ($(window).width() < 768) {
-    $('.tab1').addClass('tab-pane show active');
-    $('.tab2').addClass('tab-pane');
+    $('.tab1').addClass('tab-pane show fade active');
+    $('.tab2').addClass('tab-pane fade');
 }
 
 // ON DOCUMENT LOAD

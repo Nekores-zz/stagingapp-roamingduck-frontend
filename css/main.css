@@ -327,6 +327,7 @@ border: 1px solid white;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco{
 	padding: 8px 22px;
+	color: #333;
 }
 #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco::before{
 	    position: relative;
@@ -571,6 +572,26 @@ border: 1px solid white;
     top: 80px;
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
 }
+#editProfileModal{
+}
+#editProfileModal form .profileEditPic{
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#editProfileModal form .profileEditPic p{
+	text-align: center;
+	margin-top: 8px;
+
+}
+#editProfileModal form img{
+	border-radius: 50%;
+	text-align: center;
+	display: block;
+	margin: auto;
+	border: 5px solid #36ad6f59;
+}
 .dropdownTrip{
     position: relative;
 	top: 57px !important;
@@ -657,6 +678,36 @@ border: 1px solid white;
 				.invitationJumbor .jumbotron .UserList li a img:hover{
 					box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
 				}
+
+.dropdownCollapse#AboutVersion{
+	width: 40%;
+}
+#AboutVersion .AboutJumbor ol li .input-group{
+	border:none;
+	box-shadow: none;
+}
+#AboutVersion .AboutJumbor ol li .input-group textarea{
+	border-radius: 4px;
+	resize: none;
+	margin-left: -2px;
+}
+#AboutVersion .AboutJumbor ol li .input-group button{
+	margin-right: 4px;
+	border-radius: 4px;
+	padding-bottom:0; 
+	
+}
+#AboutVersion .AboutJumbor ol li .input-group button p{
+	    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+#AboutVersion .AboutJumbor ol li .input-group button span{
+	
+}
+#AboutVersion .AboutJumbor ol li .input-group button span::before{
+	margin: 0;
+}
 
 .tripBtn{
 	margin: 0;
@@ -1490,13 +1541,15 @@ transition: 0.5s all ease-in-out;
 }
 	#navbarSection{
 		    position: absolute;
-    top: -142px;
+    top: -100%;
 	z-index: 1;
 	transition: 0.5s all ease-in-out;
+	    width: 100%;
 	}
 	#navbarSection .tripUl {
 	padding: 15px 0;
 	padding-right: 10px;
+	    margin-left: -10px;
 }
 #mobileNavShowHide{
 	cursor: pointer !important;
@@ -1522,28 +1575,52 @@ transition: 0.5s all ease-in-out;
 	/* top: 142px; */
 	z-index: 2;
 	}
-	#chats {
+	/* #chats {
 	height: calc(100vh - 280px);
-	}
+	} */
 	#bodyMain .chatbox, #bodyMain .menubox {
-	height: calc(100vh - 120px);
+	height: calc(100vh - 80px);
 	}
-	#bodyMain .menubox #internaryBox {
-	height: calc(100vh - 252px);
+	#bodyMain .menubox #internaryBox,
+	#bodyMain .chatbox #chats {
+	height: calc(100vh - 216px);
 	}
 	.modal-backdrop.show{
 		z-index: 0 !important;
 	}
 
 	.tab1, .tab2{
-		transform: scale(0);
-		transition: 0.5s all ease-in-out;
+		padding: 0;
 	}
-	.tab1.show, .tab2.show{
-		transform: scale(1);
+	#bodyMain .menubox .buttonGroupMenuDropUpForm {
+    padding-left: 0;
+    padding-right: 0;
+	width: 98%;
+	}
+	#bodyMain .chatbox,
+	#bodyMain .menubox{
+		margin-top: 10px;
+	}
+	.mobileversionTabNav{
+		    position: absolute;
+    right: 20px;
+    top: -30px;
+	}
+	.chatFormInput textarea.form-control, .bottomMenuGroup{
+		border-radius: 0;
+	}
+	#bodyMain .menubox{
+		border-radius: 12px 12px 0px 0px;
 	}
 }
 
+
+@media(max-width: 350px){
+	#mainRoot .dropdown a .ProfilePic{
+		height: 50px;
+		width: 50px;
+	}
+}
 
 .showNavPanelShowButton{
 	top: 0 !important;
