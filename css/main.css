@@ -434,7 +434,7 @@ border: 1px solid white;
 	padding-top: 40px;
     transition: 0.2s all ease-in-out;
 	opacity: 0;
-	transform: scale(0.5);
+	transform: scale(0);
 	/* display: none; */
 
 	
@@ -515,7 +515,8 @@ border: 1px solid white;
 #bodyMain .menubox .btn-bottomMenuGroup{
 	margin: 25px;
 	top: 36px;
-    left: 0;
+	left: 0;
+	z-index: 1;
 }
 /* #bodyMain .menubox .btn-bottomMenuGroup:focus .buttonGroupMenuDropUp{
 	background: green !important;
