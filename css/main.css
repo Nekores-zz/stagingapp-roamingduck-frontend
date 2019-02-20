@@ -132,7 +132,7 @@ a.focus{
 	margin-bottom: 8px;
 }
 #bodyMain ol li .input-group {
-	box-shadow: 1px 1px 10px #33333321;
+	/* box-shadow: 1px 1px 10px #33333321; */
 	border: 1px solid transparent;
 	cursor: pointer !important;
 	border-radius: 5px;
@@ -141,11 +141,11 @@ a.focus{
 #bodyMain ol li .input-group input:hover {
 	cursor: pointer;
 }
-#bodyMain ol li .input-group:hover {
+#bodyMain .tripTasks ol li .input-group:hover {
 	border-color: #36ad6f;
 	
 }
-#bodyMain ol li .input-group .input-group-prepend{
+#bodyMain .tripTasks ol li .input-group .input-group-prepend{
 	border-right: 1px solid #eee;
 	margin-right: 0;
 }
@@ -153,11 +153,11 @@ a.focus{
 	border-color: transparent;
 	background: white;
 }
-#bodyMain ol li .input-group input{
+#bodyMain .tripTasks ol li .input-group input{
 	background: white;
 	border-color: transparent;
 }
-#bodyMain ol li .input-group input:hover, #bodyMain ol li .input-group input:focus{
+#bodyMain .tripTasks ol li .input-group input:hover, #bodyMain .tripTasks ol li .input-group input:focus{
 	outline: none;
 	box-shadow: none;
 }
@@ -516,7 +516,7 @@ border: 1px solid white;
 	margin: 25px;
 	top: 36px;
 	left: 0;
-	z-index: 1;
+	/* z-index: 1; */
 }
 /* #bodyMain .menubox .btn-bottomMenuGroup:focus .buttonGroupMenuDropUp{
 	background: green !important;
@@ -683,30 +683,43 @@ border: 1px solid white;
 .dropdownCollapse#AboutVersion{
 	width: 40%;
 }
-#AboutVersion .AboutJumbor ol li .input-group{
+#AboutVersion .AboutJumbor .AboutJumor-title{
+	    color: #36ad6f;
+}
+#AboutVersion .AboutJumbor ol li .media{
 	border:none;
 	box-shadow: none;
 }
-#AboutVersion .AboutJumbor ol li .input-group textarea{
+#AboutVersion .AboutJumbor ol li .media textarea{
 	border-radius: 4px;
 	resize: none;
 	margin-left: -2px;
 }
-#AboutVersion .AboutJumbor ol li .input-group button{
+#AboutVersion .AboutJumbor ol li .media .media-body{
+	margin-left: 10px;
+	border-left: 1px solid #ced4da;
+	padding-left: 12px;
+}
+#AboutVersion .AboutJumbor ol li .media button{
 	margin-right: 4px;
 	border-radius: 4px;
 	padding-bottom:0; 
-	
+	transition: 0.5s all ease-in-out;
 }
-#AboutVersion .AboutJumbor ol li .input-group button p{
+#AboutVersion .AboutJumbor ol li .media button:hover, #AboutVersion .AboutJumbor ol li .media button:focus{
+	background: #7a7a7a;
+	border-color: #7a7a7a;
+	box-shadow: none;
+}
+#AboutVersion .AboutJumbor ol li .media button p{
 	    font-size: 8px;
     font-weight: 500;
     letter-spacing: 0.2px;
 }
-#AboutVersion .AboutJumbor ol li .input-group button span{
+#AboutVersion .AboutJumbor ol li .media button span{
 	
 }
-#AboutVersion .AboutJumbor ol li .input-group button span::before{
+#AboutVersion .AboutJumbor ol li .media button span::before{
 	margin: 0;
 }
 
