@@ -1554,20 +1554,21 @@ transition: 0.5s all ease-in-out;
 }
 #mobileNavShowHide{
 	cursor: pointer !important;
+	height: 70px;
 }
 #mobileNavShowHide .box-button-mobile-show-top{
-		background: #f8f9fa;
-		border: 1px solid #e2e2e2;
+		color: white !important;
     	border-top: 0;
 		width: fit-content;
 		text-align: center;
-		/* margin: auto; */
 		margin-left: 10px !important;
 		padding: 0px 20px;
 		border-radius: 0px 0px 50px 50px;
 		font-size: 47px;
-		position: relative;
-		top: -8px;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		top: 6px;
 		transition: 0.5s all ease-in-out;
 		
 		
@@ -1603,9 +1604,10 @@ transition: 0.5s all ease-in-out;
 		margin-top: 10px;
 	}
 	.mobileversionTabNav{
-		    position: absolute;
-    right: 20px;
+	position: absolute;
+    right: 0;
     top: -30px;
+    left: 0;
 	}
 	.chatFormInput textarea.form-control, .bottomMenuGroup{
 		border-radius: 0;
