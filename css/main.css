@@ -405,7 +405,7 @@ border: 1px solid white;
     bottom: 50px;
     transition: 0.2s all ease-in-out;
 	opacity: 0;
-	transform: scale(0.5);
+	transform: scale(0);
 
 	
 }
@@ -683,6 +683,9 @@ border: 1px solid white;
 .dropdownCollapse#AboutVersion{
 	width: 40%;
 }
+#AboutVersion .AboutJumbor .budgetInput, #AboutVersion .AboutJumbor .travelersInput{
+	width: 10rem;
+}
 #AboutVersion .AboutJumbor .AboutJumor-title{
 	    color: #36ad6f;
 }
@@ -699,6 +702,10 @@ border: 1px solid white;
 	margin-left: 10px;
 	border-left: 1px solid #ced4da;
 	padding-left: 12px;
+}
+#AboutVersion .AboutJumbor ol li .media button{
+	height:60px;
+	width: 60px;
 }
 #AboutVersion .AboutJumbor ol li .media button{
 	margin-right: 4px;
@@ -979,6 +986,8 @@ background-image:url('../img/user.jpg');
     position: relative;
 	top: 8px;
 	color: #36ad6f;
+	width: fit-content;
+float: right;
 
 	
 }
@@ -1336,6 +1345,20 @@ background: white;
 	}
 	#bodyMain .dropdownCollapse{
 		width: 100%;
+	}
+	#AboutVersion .AboutJumbor .media{
+		display: block;
+	}
+	#AboutVersion .AboutJumbor .budgetInput, #AboutVersion .AboutJumbor .travelersInput{
+		width: 100%;
+	}
+	#AboutVersion .AboutJumbor .media ul{
+		width: 100%;
+	}
+	#AboutVersion .AboutJumbor ol li .media .media-body{
+		margin-left: 0px;
+		border-left: none;
+		padding-left: 0;
 	}
 	#navbarSectionTutorPopup{
 		top: 215px !important;
