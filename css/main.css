@@ -1,5 +1,5 @@
 /*
-CSS CONTROL
+Entire CSS
 ***
 	1. Common Styles
 	2. Body
@@ -12,13 +12,17 @@ CSS CONTROL
 		a. Chat Box
 		b. Menu Box
 			i. Form in steps
-	5. Tutorials
-	6. MEDIA QUERIES
-	7. Animations
+	5. Tutorials - Chat - Navbar - Itinerary
+	6. Media Queries
+	7. Animation
+	8. Signin/Signup popup
 	
 ***
 
 */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 
 
 /*
@@ -1360,7 +1364,7 @@ font-weight: 400;
 
 
 /* 
-	7. Animations
+	7. Animation
 */
 .animation{
 	-webkit-animation-duration: 0.3s;
@@ -1478,7 +1482,7 @@ font-weight: 400;
 
 
 /* 
-	5. Tutorials
+	5. Tutorials - Chat - Navbar - Itinerary
 */
 .tutorWrapper{
 	width: 100%;
@@ -1671,7 +1675,7 @@ background: white;
 
 
 /* 
-	6. MEDIA QUERIES
+	6. Media Queries
 */
 @media(min-width: 768px){
 	.UserProfile img{
@@ -1861,9 +1865,10 @@ background: white;
 
 
 
-#signinModal{
+/* 
+	8. Signin/Signup popup
+*/
 
-}
 #signinModal .modal-content, #signupModal .modal-content{
 border: none;
 border-radius: 12px;
