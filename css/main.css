@@ -1,8 +1,29 @@
+/*
+CSS CONTROL
+***
+	1. Common Styles
+	2. Body
+		a. Invitation Collapse
+		b. About Collpase
+	3. Navbar
+		a. MyTrips collapse
+		b. b. navbar mobile version
+	4. wrapper chatbox | menubox
+		a. Chat Box
+		b. Menu Box
+			i. Form in steps
+	5. Tutorials
+	6. MEDIA QUERIES
+	7. Animations
+	
+***
+
+*/
 
 
-
-
-/* common */
+/*
+	1. Common Styles
+*/
 
 /* button */
 .btn-theme-circle-default{
@@ -80,14 +101,98 @@ a.focus{
 
 
 
-
-/* Custom CSS Started */
-
+/*
+	2. Body
+*/
 
 #mainRoot{
 	background: #36ad6f;
 }
-/* NAVBAR SECTION */
+
+/* 
+	a. Invitation Collapse 
+*/
+#bodyMain .invitationJumbor .jumbotron{
+	background-color: transparent;
+	padding: 0;
+}
+#bodyMain .invitationJumbor .jumbotron .UserList{
+	padding: 0;
+}
+#bodyMain .invitationJumbor .jumbotron .UserList li{
+	display: inline-block;
+	margin-right: 6px;
+}
+#bodyMain .invitationJumbor .jumbotron .UserList li a img{
+	border-radius: 50%;
+	transition: 0.5s all ease-in-out;
+
+}
+#bodyMain .invitationJumbor .jumbotron .UserList li a img:hover{
+	box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
+	}
+
+
+
+
+/* 
+	b. About Collpase
+*/
+#bodyMain .dropdownCollapse#AboutVersion{
+	width: 40%;
+}
+ #bodyMain #AboutVersion .AboutJumbor .budgetInput, #AboutVersion .AboutJumbor .travelersInput{
+	width: 10rem;
+}
+ #bodyMain #AboutVersion .AboutJumbor .AboutJumor-title{
+	    color: #36ad6f;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media{
+	border:none;
+	box-shadow: none;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media textarea{
+	border-radius: 4px;
+	resize: none;
+	margin-left: -2px;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media .media-body{
+	margin-left: 10px;
+	border-left: 1px solid #ced4da;
+	padding-left: 12px;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button{
+	height:60px;
+	width: 60px;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button{
+	margin-right: 4px;
+	border-radius: 4px;
+	padding-bottom:0; 
+	transition: 0.5s all ease-in-out;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button:hover, #bodyMain #AboutVersion .AboutJumbor ol li .media button:focus{
+	background: #7a7a7a;
+	border-color: #7a7a7a;
+	box-shadow: none;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button p{
+	    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button span{
+	
+}
+#bodyMain #AboutVersion .AboutJumbor ol li .media button span::before{
+	margin: 0;
+}
+
+
+
+/*
+	3. Navbar
+*/
 #navbarSection{
 	box-shadow: 1px 1px 10px #33333330;
     margin-bottom: 5px;
@@ -119,9 +224,111 @@ a.focus{
     color: #36ad6f;
     letter-spacing: 0.4px;
 }
+#navbarSection .tripUl{
+	padding: 18px 0;
+	margin: 0;
+}
+#navbarSection .tripUl .modal-content .modal-header{
+	border: none;
+	padding-bottom: 0;
+}
+#navbarSection .tripUl .modal-content{
+	border-radius: 12px;
+    border: none;
+    box-shadow: 1px 1px 30px #3339;
 
+}
+#navbarSection .tripUl .modal-content .modal-body ul{
+	padding: 0;
+}
+#navbarSection .tripUl .modal-content .modal-body ul li{
+	display: block;
+	text-align: center;
+	padding-bottom: 20px;
+	
+	
+}
+#navbarSection .tripUl .modal-content .modal-body ul li a{
+	color: #333;
+    font-size: 14px;
+	line-height: 35px;
+	text-decoration: none;
+	transition: 0.5s all ease-in-out;
+}
+#navbarSection .tripUl .modal-content .modal-body ul li:last-child a{
+	color: red;
+	transition: 0.5s all ease-in-out;
+}
+
+#navbarSection .tripUl .modal-content .modal-body ul li a:hover{
+	color: #36ad6f;
+}
+#navbarSection .tripUl .modal-content .modal-body ul li:last-child a:hover{
+	color: red;
+}
+#navbarSection .tripUl li{
+	display: inline-block;
+}
+
+#navbarSection .btn-invite{
+	position: relative;
+    top: 4px;
+	margin-right:4px;
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+#navbarSection .btn-about{
+	position: relative;
+	top: 4px;
+	margin-right:4px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+#navbarSection .tripBtn{
+	margin: 0;
+	padding: 36px 0px;
+	padding-left: 10px;
+}
+#navbarSection .tripBtn a{
+	border-radius: 40px;
+	font-size: 14px;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+
+
+#navbarSection .tripBtn a span{
+	font-size: 18px;
+	padding-left: 8px;
+}
+#navbarSection .dropdownInvite{
+    position: relative;
+    top: 68px;
+    box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
+}
+#navbarSection .dropdownTrip::before, #navbarSection .dropdownProfile::before, #navbarSection .dropdownInvite::before{
+	content: '';
+	position: absolute;
+	left: 21px;
+	right: 0;
+	top: -11px;
+	background: white;
+	height: 20px;
+	width: 20px;
+	transform: rotate(45deg);
+	overflow-y: 0;
+	border: 1px solid rgba(0,0,0,.15);
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+
+/* 
+	4. wrapper chatbox | menubox
+*/
 #bodyMain{
-
 	background: #3cac71;
 	position: relative;
 }
@@ -132,7 +339,6 @@ a.focus{
 	margin-bottom: 8px;
 }
 #bodyMain ol li .input-group {
-	/* box-shadow: 1px 1px 10px #33333321; */
 	border: 1px solid transparent;
 	cursor: pointer !important;
 	border-radius: 5px;
@@ -166,11 +372,11 @@ a.focus{
 }
 
 #bodyMain .dropdownCollapse{
-	    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 30%;
-    z-index: 1;
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 30%;
+	z-index: 1;
 }
 #bodyMain .dropdownCollapse#invitationUserCollpase, #bodyMain .dropdownCollapse#AboutVersion{
 	right: 0;
@@ -182,282 +388,12 @@ a.focus{
 	border-top: 1px solid #f1f1f1;
 	border-radius: 0px 0px 12px 12px;
 	background-color: #f2f2f2;
-margin: 10px;
-margin-top: 0px;
-border: none;
-box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
-}
-#bodyMain .chatbox{
-	margin-top: 30px;
-	height: calc(100vh - 148px);
-	background: url('../img/bg.jpg');
-	background-size: cover;
-	border-radius: 12px;
-}
-#bodyMain .alpha-color{
-	border-radius: 12px;
-	background: rgba(206, 199, 128, 0.1);
-	width: 100%;
-	height: 100%;
-	position: relative;
-	box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.31);
-}
-
-
-/* ======= RIGHT BOX CSS ==========> */
-#bodyMain .menubox{
-	margin-top: 30px;
-    height: calc(100vh - 148px);
-	background: url('../img/bg.jpg');
-	background-size: cover;
-	border-radius: 12px;
-	overflow: hidden;
-}
-
-/* ITERNARY ITEMS CSS */
-
-#bodyMain .menubox #internaryBox{
-	height: calc(100vh - 285px);
-    overflow: hidden;
-    overflow-y: scroll;
-    margin: 0 !important;
-    padding-top: 8px;
-}
-#bodyMain .menubox .filtersIternaryBox {
-	background: #ffffff8f;
-    /* padding: 20px 15px 15px 15px; */
-	/* box-shadow: 1px 1px 10px #33333324; */
-	border-bottom: 1px solid #e1e1e1;
-}
-#bodyMain .menubox .filtersIternaryBox .contentBoxes{
-	padding: 20px 15px 15px 15px;
-}
-#bodyMain .menubox .filtersIternaryBox .contentBox{
-	width: fit-content;
-	display: inline-block;
-    padding: 8px 12px;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    border-radius: 20px;
-	box-shadow: 1px 1px 10px #00000017;
-	background: white;
-	padding-bottom: 0px;
-}
-#bodyMain .menubox .filtersIternaryBox .contentBoxes h6{
-    margin-bottom: 16px;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.2px;
-    color: #212529;
-}
-#bodyMain .menubox .filtersIternaryBox .contentBox input{
-position: relative;
-cursor: pointer;
-top: -2px;
-}
-#bodyMain .menubox .filtersIternaryBox .contentBox label{
-/* margin: 8px 8px; */
-cursor: pointer;
-}
-#bodyMain .menubox #internaryBox .internaryTasks{
-	padding: 0;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles{
-	/* margin-top: 10px; */
-	    margin-bottom: 12px;
-}
-
-#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles h6{
-position: relative;
-    left: 24px;
-	top: 7px;
-	line-height: 10px;
-    margin: 0;
-    background: white;
-    width: fit-content;
-    border: 1px solid #d6d5ce;
-    border-radius: 20px;
-	padding: 2px 6px;
-	    color: #36ad6f;
-    font-weight: 400;
-    font-size: 8px;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles hr{
-	margin: 0;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask{
-	margin: 20px;
-	padding: 0;
-	background: white;
-	padding: 10px;
-	border-radius: 12px;
-	box-shadow: 1px 1px 3px #3333332e;
-	/* margin: 0 !important; */
-	/* transform: scale(1); */
-	transition: 0.5s all ease-in-out;
-	border: 1px solid transparent;
-	cursor: pointer;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask:hover{
- /* transform: scale(1.01); */
- /* box-shadow: 1px 1px 10px #33333352; */
- border: 1px solid #36ad6f;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco{
-	/* color: red; */
-	padding: 10px;
-	width: 36px;
-    /* margin: 0 !important; */
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco.attachementConfirm::after{
-content: '';
-background:#36ad6f;
-position: absolute;
-top: 0;
-right: 0;
-border-radius: 50%;
-height: 12px;
-width: 12px;
-border: 1px solid white;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox{
-	border-right: 1px solid #e3e3e3;
-	    position: relative;
-    top: 8px;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco{
-	padding: 8px 22px;
-	color: #333;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco::before{
-	    position: relative;
-	left: -9px;
-	margin: 0;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .innerContentLists li, #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .innerContentLists li{
-	list-style-type: none;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .notes-btn{
-	position: relative;
-	top: 20px;
-    right: 6px;
-    font-size: 12px;
-    color: #2dae6d;
-	font-weight: 500;
-	/* opacity: 0; */
-	/* transform: scale(0); */
-	transition: 0.5s all ease-in-out;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .website.link{
-	margin-top: 8px;
-}
-/* #bodyMain .menubox #internaryBox .internaryTasks .internaryTask:hover .rightBox .notes-btn{
-	transform: scale(1);
-	opacity: 1;
-} */
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists {
-	/* background:red; */
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists{
-	padding: 9px 0px;
-}
-
-
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask {
-	list-style-type: none;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists .para-1{
-	font-size: 12px;
-	margin: 0;
-}
-#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists .para-prmy{
-	color: #2dae6d;
-	font-size: 10px;
-	font-weight: 400;
-	letter-spacing: 0.1px;
-}
-
-
-#bodyMain .menubox .buttonGroupMenuDropUp{
-	text-align: center;
-	font-size: 25px;
-}
-#bodyMain .menubox .buttonGroupMenuDropUp .menuCaption{
-	margin: 0;
-	    font-size: 8px;
-    text-transform: capitalize;
-    letter-spacing: 0.4px;
-	font-weight: 500;
-
-}
-#bodyMain .menubox .buttonGroupMenuDropUp ul{
-	    padding: 0;
-    margin: 0;
-    padding: 17px 20px;
-    box-shadow: 1px 1px 10px #33333359;
-    background: white;
-    border-radius: 12px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    margin: auto;
-    bottom: 50px;
-    transition: 0.2s all ease-in-out;
-	opacity: 0;
-	transform: scale(0);
-
-	
-}
-.buttonGroupMenuDropUp .showMenudropUp{
-	/* background: black !important; */
-	opacity: 1 !important;
-	bottom: 100px !important;
-	transform: scale(1) !important;
-	
-}
-#bodyMain .menubox .buttonGroupMenuDropUpForm{
-	    padding: 0;
-    margin: 0;
-    padding: 17px 20px;
-    box-shadow: 1px 1px 10px #33333359;
-    background: white;
-    /* display: inline-block; */
-    border-radius: 12px;
-    /* position: relative; */
-    position: absolute;
-    left: 0;
-    right: 0;
-    /* width: fit-content; */
-    margin: auto;
-	bottom: 200px;
-	padding-top: 40px;
-    transition: 0.2s all ease-in-out;
-	opacity: 0;
-	transform: scale(0);
-	/* display: none; */
-
-	
-}
-.buttonGroupMenuDropUpForm.showMenudropUpForm{
-	/* background: black !important; */
-	opacity: 1 !important;
-	bottom: 100px !important;
-	transform: scale(1) !important;
-	/* display: block !important; */
-	
-}
-
-#bodyMain .menubox .buttonGroupMenuDropUp ul li:last-child{
+	margin: 10px;
+	margin-top: 0px;
 	border: none;
+	box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.33);
 }
-#bodyMain .menubox .buttonGroupMenuDropUp ul li a{
-	color: #36ad6f;
-}
-#bodyMain .menubox .buttonGroupMenuDropUp ul li a span::before{
-	font-size: 30px;
-	margin: 0;
-}
+
 #bodyMain .boXtitle{
 	margin:0;
 	position: relative;
@@ -511,6 +447,638 @@ border: 1px solid white;
 	
 }
 
+/*
+	a. Chat Box
+*/
+#bodyMain .chatbox{
+	margin-top: 30px;
+	height: calc(100vh - 148px);
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	border-radius: 12px;
+}
+#bodyMain .alpha-color{
+	border-radius: 12px;
+	background: rgba(206, 199, 128, 0.1);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.31);
+}
+
+.chatFormInput{
+	position: relative;
+	left:0;
+	bottom:0;
+	width:100%;
+
+}
+.chatFormInput textarea.form-control{
+	border-radius: 0px 0px 12px 12px;
+	position: relative;
+	padding-left: 85px;
+	padding-right: 85px;
+	border:0;
+	box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+	padding-top: 15px;
+	resize: none;
+}
+
+
+.chatFormInput input[type="file"]{
+width: 50px;
+padding: 50px 0 0 0;
+height: 50px;
+overflow: hidden;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: transparent;
+border-radius: 50%;
+background-size: 60px 60px;
+position: absolute;
+border: none;
+top: 12px;
+background: rgba(51, 51, 51, 0.08);
+left: 14px;
+margin: 10px;
+cursor: pointer;
+transition: 0.5s all ease-in-out;
+}
+
+.chatFormInput input[type="file"]:hover, .chatFormInput input[type="file"]:focus{
+	color: #495057;
+	box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
+}
+.chatFormInput input[type="file"]::after{
+	content: '\f0c6';
+	position: absolute;
+	top: 9px;
+	left: 12px;
+	height: 74px;
+	width: 50px;
+	font-size: 30px;	
+}
+.chatFormInput .sendBtn{
+	position: absolute;
+    bottom: 20px;
+    right: 23px;
+	height: 74px;
+	width: 50px;
+	border: none;
+	width: 50px;
+	height: 50px;
+	transition: 0.5s all ease-in-out;
+	cursor: pointer;
+}
+
+#chats{
+	height: calc(100vh - 285px);
+overflow: hidden;
+overflow-y: scroll;
+padding-bottom: 30px;
+
+}
+#chats .msgItem{
+	border-radius: 12px;
+	padding: 10px;
+	margin: 20px;
+	position: relative;
+	top: 0;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	
+}
+#chats .msgItem .usernameText{
+	position: absolute;
+	top: -18px;
+	left: 0px;
+	font-size: 10px;
+	font-weight: 500;
+	color: #36ad6f;
+}
+#chats .msgItem .attachmentFileChat{
+	padding: 6px 8px;
+	width: fit-content;
+	margin: 10px 0px 0px 0px;
+	position: relative;
+	background: #eee;
+	color: #36ad6f;
+	border-radius: 12px 0px 0px 12px;
+}
+#chats .msgItem .attachmentFileChat span.fa-download{
+	padding: 9.5px;
+	position: absolute;
+	background: #eee;
+	top: 0;
+	right: -31px;
+	color: #36ad6f;
+	border-radius: 0px 12px 12px 0px;
+}
+#chats .msgItem .timeStamp{
+	position: absolute;
+	top: 12px;
+	right: -37px;
+	font-size: 10px;
+	color: #9d9d9d;
+	font-weight: 400;
+}
+#chats .recievedMsg{
+	background: #FFF;
+	display: inline-block;
+	border-radius: 12px 12px 12px 12px;
+	box-shadow: 1px 1px 3px #3333332e;
+	left: 40px;
+	top: 20px;
+	margin-bottom: 20px;
+}
+#chats .recievedMsg::before{
+	cursor:pointer;
+	content: '';
+	position: absolute;
+	left: -48px;
+	top: -18px;
+	border-radius: 50%;
+	height: 42px;
+	width: 42px;
+	background-size: cover;
+	background-image:url('../img/bg.jpg');
+	border: 2px solid rgba(54, 173, 111, 0.44);
+
+}
+
+#chats .sentMsg{
+	background: #36ad6f !important;
+	color: white;
+	font-weight: 100;
+	display: inline-block;
+	left: 40px;
+	top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 1px 1px 3px #3333332e;
+}
+#chats .sentMsg::before{
+	cursor:pointer;
+	content: '';
+	position: absolute;
+	left: -48px;
+	top: -18px;
+	border-radius: 50%;
+	height: 42px;
+	width: 42px;
+	background-size: cover;
+	background-image:url('../img/user.jpg');
+	border: 2px solid rgba(54, 173, 111, 0.44);
+}
+
+
+
+
+/* scrollbar */
+
+#chats::-webkit-scrollbar, #bodyMain .menubox #internaryBox::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+#chats::-webkit-scrollbar-track, #bodyMain .menubox #internaryBox::-webkit-scrollbar-track {
+  background: #f4f4f4; 
+}
+ 
+/* Handle */
+#chats::-webkit-scrollbar-thumb, #bodyMain .menubox #internaryBox::-webkit-scrollbar-thumb {
+     border: 4px solid #f4f4f4;
+    background: rgb(146, 146, 146);
+}
+
+/* Handle on hover */
+#chats::-webkit-scrollbar-thumb:hover, #bodyMain .menubox #internaryBox::-webkit-scrollbar-thumb:hover {
+  background: rgb(128, 128, 128);
+}
+
+
+/*
+	b. Menu Box
+*/
+#bodyMain .menubox{
+	margin-top: 30px;
+    height: calc(100vh - 148px);
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+#bodyMain .menubox #internaryBox{
+	height: calc(100vh - 285px);
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 0 !important;
+    padding-top: 8px;
+}
+#bodyMain .menubox .filtersIternaryBox {
+	background: #ffffff8f;
+	border-bottom: 1px solid #e1e1e1;
+}
+#bodyMain .menubox .filtersIternaryBox .contentBoxes{
+	padding: 20px 15px 15px 15px;
+}
+#bodyMain .menubox .filtersIternaryBox .contentBox{
+	width: fit-content;
+	display: inline-block;
+    padding: 8px 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 20px;
+	box-shadow: 1px 1px 10px #00000017;
+	background: white;
+	padding-bottom: 0px;
+}
+#bodyMain .menubox .filtersIternaryBox .contentBoxes h6{
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: #212529;
+}
+#bodyMain .menubox .filtersIternaryBox .contentBox input{
+position: relative;
+cursor: pointer;
+top: -2px;
+}
+#bodyMain .menubox .filtersIternaryBox .contentBox label{
+cursor: pointer;
+}
+#bodyMain .menubox #internaryBox .internaryTasks{
+	padding: 0;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles{
+	margin-bottom: 12px;
+}
+
+#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles h6{
+	position: relative;
+    left: 24px;
+	top: 7px;
+	line-height: 10px;
+    margin: 0;
+    background: white;
+    width: fit-content;
+    border: 1px solid #d6d5ce;
+    border-radius: 20px;
+	padding: 2px 6px;
+	    color: #36ad6f;
+    font-weight: 400;
+    font-size: 8px;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .dateTopTitles hr{
+	margin: 0;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask{
+	margin: 20px;
+	padding: 0;
+	background: white;
+	padding: 10px;
+	border-radius: 12px;
+	box-shadow: 1px 1px 3px #3333332e;
+	transition: 0.5s all ease-in-out;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask:hover{
+ border: 1px solid #36ad6f;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco{
+	padding: 10px;
+	width: 36px;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .mainIco.attachementConfirm::after{
+content: '';
+background:#36ad6f;
+position: absolute;
+top: 0;
+right: 0;
+border-radius: 50%;
+height: 12px;
+width: 12px;
+border: 1px solid white;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox{
+	border-right: 1px solid #e3e3e3;
+	    position: relative;
+    top: 8px;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco{
+	padding: 8px 22px;
+	color: #333;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .mainIco::before{
+	    position: relative;
+	left: -9px;
+	margin: 0;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .leftBox .innerContentLists li, #bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .innerContentLists li{
+	list-style-type: none;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .notes-btn{
+	position: relative;
+	top: 20px;
+    right: 6px;
+    font-size: 12px;
+    color: #2dae6d;
+	font-weight: 500;
+	transition: 0.5s all ease-in-out;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .rightBox .website.link{
+	margin-top: 8px;
+}
+
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists{
+	padding: 9px 0px;
+}
+
+
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask {
+	list-style-type: none;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists .para-1{
+	font-size: 12px;
+	margin: 0;
+}
+#bodyMain .menubox #internaryBox .internaryTasks .internaryTask .innerContentLists .para-prmy{
+	color: #2dae6d;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+}
+
+
+#bodyMain .menubox .buttonGroupMenuDropUp{
+	text-align: center;
+	font-size: 25px;
+}
+#bodyMain .menubox .buttonGroupMenuDropUp .menuCaption{
+	margin: 0;
+	    font-size: 8px;
+    text-transform: capitalize;
+    letter-spacing: 0.4px;
+	font-weight: 500;
+
+}
+#bodyMain .menubox .buttonGroupMenuDropUp ul{
+	    padding: 0;
+    margin: 0;
+    padding: 17px 20px;
+    box-shadow: 1px 1px 10px #33333359;
+    background: white;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    bottom: 50px;
+    transition: 0.2s all ease-in-out;
+	opacity: 0;
+	transform: scale(0);
+
+	
+}
+#bodyMain .menubox .buttonGroupMenuDropUp .showMenudropUp{
+	opacity: 1 !important;
+	bottom: 100px !important;
+	transform: scale(1) !important;
+	
+}
+#bodyMain .menubox .buttonGroupMenuDropUpForm{
+	padding: 0;
+    margin: 0;
+    padding: 17px 20px;
+    box-shadow: 1px 1px 10px #33333359;
+    background: white;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+	bottom: 200px;
+	padding-top: 40px;
+    transition: 0.2s all ease-in-out;
+	opacity: 0;
+	transform: scale(0);
+}
+#bodyMain .menubox .buttonGroupMenuDropUpForm.showMenudropUpForm{
+	opacity: 1 !important;
+	bottom: 100px !important;
+	transform: scale(1) !important;
+	
+}
+
+#bodyMain .menubox .buttonGroupMenuDropUp ul li:last-child{
+	border: none;
+}
+#bodyMain .menubox .buttonGroupMenuDropUp ul li a{
+	color: #36ad6f;
+}
+#bodyMain .menubox .buttonGroupMenuDropUp ul li a span::before{
+	font-size: 30px;
+	margin: 0;
+}
+
+#bodyMain .menubox .bottomMenuGroup{
+	height: 93px;
+	background: white;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	border:0;
+	box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
+	border-radius: 0px 0px 12px 12px;
+	text-align: center;
+}
+#bodyMain .menubox .bottomMenuGroup .PriceBox{
+	text-align: right;
+	padding-right: 30px;
+	
+}
+#bodyMain .menubox .bottomMenuGroup .PriceBox h5{
+	font-size: 15px;
+	margin: 0;
+	position: relative;
+	top: 8px;
+	color: #36ad6f;
+	width: fit-content;
+	float: right;
+
+	
+}
+
+
+/* i. Form in steps */
+
+.menubox #msform {
+	width: 80%;
+	text-align: center;
+	position: relative;
+	height: 320px;
+}
+.menubox #msform .closeBtnCross{
+	position: absolute;
+	top: 5px;
+	right: 11px;
+}
+.menubox #msform fieldset {
+	width: 80%;
+	margin: auto;
+	right: 0;
+	left: 0;
+	position: relative;
+}
+.menubox #msform fieldset input.fa-paperclip::before{
+	position: absolute;
+    top: 16px;
+	left: 17px;
+	z-index: 1;
+}
+.menubox #msform fieldset input[type="text"]{
+	position: relative;
+	z-index: 0;
+	padding-right: 27px;
+}
+.menubox #msform fieldset input.departureDate::after{
+	content:'';
+	background:red;
+	height:10px;
+	width:10px;
+	position: absolute;
+	left:0;
+	right:0;
+}
+.menubox #msform fieldset .famInputIco{
+	position: relative;
+	z-index: 2;
+}
+.menubox #msform fieldset .famInputIco::before{
+	z-index: 2;
+	position: absolute;
+	right: 8px;
+	top: 10px;
+	color: #ced4da;
+}
+.menubox #msform fieldset .famInputIco input{
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-weight: 500;
+	border-radius: 4px 0px 0px 4px;
+}
+.menubox #msform fieldset input.fa-paperclip{
+	width: 50px;
+	padding: 50px 0 0 0;
+	height: 50px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: transparent;
+	border-radius: 50%;
+	background-size: 60px 60px;
+	position: absolute;
+	border: none;
+	top: -4px;
+	background: rgba(51, 51, 51, 0.08);
+	right: -4px;
+	margin: 10px;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+/*Hide all except first fieldset*/
+.menubox #msform fieldset:not(:first-of-type) {
+	display: none;
+}
+.mobileversionTabContent{
+    border: none;
+    background: white;
+    border-radius: 50px;
+	margin: auto;
+	transform: scale(0);
+	height: 0;
+	width: 0;
+	
+}
+.mobileversionTabContent a.nav-link{
+	border: none;
+    border-radius: 50px;
+	margin: 0;
+	background:white;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	padding: 16px;
+    border: 3px solid white;
+    /* height: 0; */
+	line-height: 0;
+	text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 400;
+	letter-spacing: 0.3px;
+	color: #36ad6f;
+}
+.mobileversionTabContent a.nav-link.active{
+	background: #36ad6f;
+    border: 3px solid white;
+    color: white;
+}
+/*progressbar*/
+.menubox #msform #progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	padding: 0;
+}
+.menubox #msform #progressbar li {
+	list-style-type: none;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+.menubox #msform #progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: #eee;
+	border-radius: 50%;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+.menubox #msform #progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #eee;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+.menubox #msform #progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.menubox #msform #progressbar li.active:before,  .menubox #msform #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+
 
 #bodyMain .menubox .btn-bottomMenuGroup{
 	margin: 25px;
@@ -538,7 +1106,7 @@ border: 1px solid white;
 }
 
 #attachementsShow .attachmentItem .attachmentBtnGroup{
-	    position: relative;
+	position: relative;
     top: -5px;
 }
 #attachementsShow .attachmentItem .attachmentBtnGroup span{
@@ -554,12 +1122,7 @@ border: 1px solid white;
     width: 60px;
     border-radius: 50%;
     width: 60px;
-    
 }
-
-
-
-
 
 #mainRoot nav .rightPart ul li:not(:last-child){
     position: relative;
@@ -572,8 +1135,6 @@ border: 1px solid white;
     position: relative;
     top: 80px;
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
-}
-#editProfileModal{
 }
 #editProfileModal form .profileEditPic{
 	display: block;
@@ -599,185 +1160,13 @@ border: 1px solid white;
 	width: auto !important;
     box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
 }
-.tripUl{
-	padding: 18px 0;
-	margin: 0;
-}
-.tripUl .modal-content .modal-header{
-	border: none;
-	padding-bottom: 0;
-}
-.tripUl .modal-content{
-	border-radius: 12px;
-    border: none;
-    box-shadow: 1px 1px 30px #3339;
-
-}
-.tripUl .modal-content .modal-body ul{
-	padding: 0;
-}
-.tripUl .modal-content .modal-body ul li{
-	display: block;
-	text-align: center;
-	padding-bottom: 20px;
-	
-	
-}
-.tripUl .modal-content .modal-body ul li a{
-	color: #333;
-    font-size: 14px;
-	line-height: 35px;
-	text-decoration: none;
-	transition: 0.5s all ease-in-out;
-}
-.tripUl .modal-content .modal-body ul li:last-child a{
-	color: red;
-	transition: 0.5s all ease-in-out;
-}
-
-.tripUl .modal-content .modal-body ul li a:hover{
-	color: #36ad6f;
-}
-.tripUl .modal-content .modal-body ul li:last-child a:hover{
-	color: red;
-}
-.tripUl li{
-	display: inline-block;
-}
-
-.btn-invite{
-	position: relative;
-    top: 4px;
-	margin-right:4px;
-	padding-left: 12px !important;
-	padding-right: 12px !important;
-}
-.btn-about{
-	position: relative;
-	top: 4px;
-	margin-right:4px;
-	padding-left: 18px;
-	padding-right: 18px;
-}
-
-.invitationJumbor .jumbotron{
-	background-color: transparent;
-	padding: 0;
-}
-		.invitationJumbor .jumbotron .UserList{
-			padding: 0;
-		}
-		.invitationJumbor .jumbotron .UserList li{
-			display: inline-block;
-			margin-right: 6px;
-		}
-		.invitationJumbor .jumbotron .UserList li a img{
-			border-radius: 50%;
-			transition: 0.5s all ease-in-out;
-			
-		}
-				.invitationJumbor .jumbotron .UserList li a img:hover{
-					box-shadow: 0 0 0 0.2rem rgba(45, 174, 109, 0.25);
-				}
-
-.dropdownCollapse#AboutVersion{
-	width: 40%;
-}
-#AboutVersion .AboutJumbor .budgetInput, #AboutVersion .AboutJumbor .travelersInput{
-	width: 10rem;
-}
-#AboutVersion .AboutJumbor .AboutJumor-title{
-	    color: #36ad6f;
-}
-#AboutVersion .AboutJumbor ol li .media{
-	border:none;
-	box-shadow: none;
-}
-#AboutVersion .AboutJumbor ol li .media textarea{
-	border-radius: 4px;
-	resize: none;
-	margin-left: -2px;
-}
-#AboutVersion .AboutJumbor ol li .media .media-body{
-	margin-left: 10px;
-	border-left: 1px solid #ced4da;
-	padding-left: 12px;
-}
-#AboutVersion .AboutJumbor ol li .media button{
-	height:60px;
-	width: 60px;
-}
-#AboutVersion .AboutJumbor ol li .media button{
-	margin-right: 4px;
-	border-radius: 4px;
-	padding-bottom:0; 
-	transition: 0.5s all ease-in-out;
-}
-#AboutVersion .AboutJumbor ol li .media button:hover, #AboutVersion .AboutJumbor ol li .media button:focus{
-	background: #7a7a7a;
-	border-color: #7a7a7a;
-	box-shadow: none;
-}
-#AboutVersion .AboutJumbor ol li .media button p{
-	    font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-}
-#AboutVersion .AboutJumbor ol li .media button span{
-	
-}
-#AboutVersion .AboutJumbor ol li .media button span::before{
-	margin: 0;
-}
-
-.tripBtn{
-	margin: 0;
-	padding: 36px 0px;
-	padding-left: 10px;
-}
-	.tripBtn a{
-		border-radius: 40px;
-	font-size: 14px;
-	font-weight: 300;
-	text-decoration: none;
-	}
-	
-	
-	
-		.tripBtn a span{
-			font-size: 18px;
-	padding-left: 8px;
-}
-.dropdownInvite{
-    position: relative;
-    top: 68px;
-    box-shadow: 5px 11px 10px 0px rgba(51, 51, 51, 0.37);
-}
-.dropdownTrip::before, .dropdownProfile::before, .dropdownInvite::before{
-	content: '';
-	position: absolute;
-	left: 21px;
-	right: 0;
-	top: -11px;
-	background: white;
-	height: 20px;
-	width: 20px;
-	transform: rotate(45deg);
-	overflow-y: 0;
-	border: 1px solid rgba(0,0,0,.15);
-	border-bottom: 0px;
-	border-right: 0px;
-}
 
 
 .chatFormInput{
-	/* position: absolute; */
 	position: relative;
 	left:0;
 	bottom:0;
 	width:100%;
-	/* margin-left: 15px; */
-/* padding-right: 30px; */
 
 }
 .chatFormInput textarea.form-control{
@@ -849,7 +1238,7 @@ overflow-y: scroll;
 padding-bottom: 30px;
 
 }
-.msgItem{
+#chats .msgItem{
 	border-radius: 12px;
 	padding: 10px;
 	margin: 20px;
@@ -859,7 +1248,7 @@ padding-bottom: 30px;
 	letter-spacing: 0.2px;
 	
 }
-.msgItem .usernameText{
+#chats .msgItem .usernameText{
 position: absolute;
 top: -18px;
 left: 0px;
@@ -867,19 +1256,16 @@ font-size: 10px;
 font-weight: 500;
 color: #36ad6f;
 }
-.msgItem .attachmentFileChat{
+#chats .msgItem .attachmentFileChat{
 	padding: 6px 8px;
-	/* position: absolute; */
-	
 	width: fit-content;
-	/* background: red; */
 	margin: 10px 0px 0px 0px;
 	position: relative;
 	background: #eee;
 	color: #36ad6f;
 	border-radius: 12px 0px 0px 12px;
 }
-.msgItem .attachmentFileChat span.fa-download{
+#chats .msgItem .attachmentFileChat span.fa-download{
 	padding: 9.5px;
 	position: absolute;
 	background: #eee;
@@ -888,7 +1274,7 @@ color: #36ad6f;
 	color: #36ad6f;
 	border-radius: 0px 12px 12px 0px;
 }
-.msgItem .timeStamp{
+#chats .msgItem .timeStamp{
 position: absolute;
 top: 12px;
 right: -37px;
@@ -896,101 +1282,54 @@ font-size: 10px;
 color: #9d9d9d;
 font-weight: 400;
 }
-/* .recievedMsg::after{
-	content: '';
-position: absolute;
-left: 0px;
-bottom: -10px;
-border-left: 10px solid #f3f3f3;
-border-top: 10px solid #f3f3f3;
-border-bottom: 10px solid transparent;
-border-right: 10px solid transparent;
-} */
-.recievedMsg{
+#chats .recievedMsg{
 	background: #FFF;
 	display: inline-block;
-border-radius: 12px 12px 12px 12px;
-box-shadow: 1px 1px 3px #3333332e;
-left: 40px;
-    top: 20px;
-    margin-bottom: 20px;
+	border-radius: 12px 12px 12px 12px;
+	box-shadow: 1px 1px 3px #3333332e;
+	left: 40px;
+	top: 20px;
+	margin-bottom: 20px;
 }
-.recievedMsg::before{
-	    
+#chats .recievedMsg::before{
 	cursor:pointer;
 	content: '';
-position: absolute;
-left: -48px;
-top: -18px;
-border-radius: 50%;
-height: 42px;
+	position: absolute;
+	left: -48px;
+	top: -18px;
+	border-radius: 50%;
+	height: 42px;
 	width: 42px;
 	background-size: cover;
-background-image:url('../img/bg.jpg');
-border: 2px solid rgba(54, 173, 111, 0.44);
+	background-image:url('../img/bg.jpg');
+	border: 2px solid rgba(54, 173, 111, 0.44);
 
 }
 
-.sentMsg{
+#chats .sentMsg{
 	background: #36ad6f !important;
 	color: white;
 	font-weight: 100;
 	display: inline-block;
-left: 40px;
-    top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 1px 1px 3px #3333332e;
+	left: 40px;
+	top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 1px 1px 3px #3333332e;
 }
-/* .sentMsg::after{
-	content: '';
-position: absolute;
-left: 0px;
-bottom: -10px;
-border-left: 10px solid #36ad6f;
-border-top: 10px solid #36ad6f;
-border-bottom: 10px solid transparent;
-border-right: 10px solid transparent;
-} */
-.sentMsg::before{
+#chats .sentMsg::before{
 	cursor:pointer;
-	    content: '';
-    position: absolute;
-    left: -48px;
-    top: -18px;
-    border-radius: 50%;
-    height: 42px;
+	content: '';
+	position: absolute;
+	left: -48px;
+	top: -18px;
+	border-radius: 50%;
+	height: 42px;
 	width: 42px;
 	background-size: cover;
-background-image:url('../img/user.jpg');
-    border: 2px solid rgba(54, 173, 111, 0.44);
+	background-image:url('../img/user.jpg');
+	border: 2px solid rgba(54, 173, 111, 0.44);
 }
-.bottomMenuGroup{
-	height: 93px;
-	background: white;
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	border:0;
-	box-shadow: 0px -5px 8px rgba(51, 51, 51, 0.19);
-	border-radius: 0px 0px 12px 12px;
-	text-align: center;
-}
-.bottomMenuGroup .PriceBox{
-	text-align: right;
-	padding-right: 30px;
-	
-}
-.bottomMenuGroup .PriceBox h5{
-	font-size: 15px;
-	    margin: 0;
-    position: relative;
-	top: 8px;
-	color: #36ad6f;
-	width: fit-content;
-float: right;
 
-	
-}
 
 
 
@@ -1002,17 +1341,13 @@ float: right;
 
 /* Track */
 #chats::-webkit-scrollbar-track, #bodyMain .menubox #internaryBox::-webkit-scrollbar-track {
-  /* background:transparent !important; */
-  /* border-radius: 50px; */
   background: #f4f4f4; 
-  /* border-radius: 0px 50px 0px 0px; */
 }
  
 /* Handle */
 #chats::-webkit-scrollbar-thumb, #bodyMain .menubox #internaryBox::-webkit-scrollbar-thumb {
      border: 4px solid #f4f4f4;
     background: rgb(146, 146, 146);
-	/* border-radius: 0px 50px 50px 0px; */
 }
 
 /* Handle on hover */
@@ -1020,7 +1355,13 @@ float: right;
   background: rgb(128, 128, 128);
 }
 
-/* Animation */
+
+
+
+
+/* 
+	7. Animations
+*/
 .animation{
 	-webkit-animation-duration: 0.3s;
 	animation-duration: 0.3s;
@@ -1136,7 +1477,9 @@ float: right;
 
 
 
-/* tutor */
+/* 
+	5. Tutorials
+*/
 .tutorWrapper{
 	width: 100%;
 	z-index: 1;
@@ -1154,7 +1497,6 @@ float: right;
 	display: block !important;
 	visibility: hidden;
 	transition: 1s all ease-in-out;
-	/* top: 100px; */
 	background: rgba(0, 0, 0, 0.56);
 }
 #tutorStart .modal-content{
@@ -1263,18 +1605,18 @@ background: white;
 }
 #bottomMenuGroupTutorPopup .bottomMenuGroupTutorPopup-body::after{
 	content: '';
-background: red;
-height: 20px;
-width: 20px;
-position: absolute;
-bottom: -10px;
-left: 0;
-margin: auto;
-text-align: center;
-display: block;
-right: 0;
-transform: rotate(45deg);
-background: white;
+	background: red;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	margin: auto;
+	text-align: center;
+	display: block;
+	right: 0;
+	transform: rotate(45deg);
+	background: white;
 }
 
 
@@ -1311,31 +1653,30 @@ background: white;
 }
 #chatAreaTutorPopup .chatAreaTutorPopup-body::after{
 	content: '';
-background: red;
-height: 20px;
-width: 20px;
-position: absolute;
-bottom: -10px;
-left: 0;
-margin: auto;
-text-align: center;
-display: block;
-right: 0;
-transform: rotate(45deg);
-background: white;
+	background: red;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	margin: auto;
+	text-align: center;
+	display: block;
+	right: 0;
+	transform: rotate(45deg);
+	background: white;
 }
 
 
 
 
-
-
-/* MEDIA QUERIES */
+/* 
+	6. MEDIA QUERIES
+*/
 @media(min-width: 768px){
 	.UserProfile img{
 		margin: 0px 12px;
-	}
-	
+	}	
 	
 }
 
@@ -1346,6 +1687,9 @@ background: white;
 	#bodyMain .dropdownCollapse{
 		width: 100%;
 	}
+	#bodyMain .dropdownCollapse#AboutVersion{
+	width: 100%;
+}
 	#AboutVersion .AboutJumbor .media{
 		display: block;
 	}
@@ -1372,250 +1716,79 @@ background: white;
 
 
 
-/*  */
-
-/*form styles*/
-#msform {
-	width: 80%;
-	text-align: center;
-	position: relative;
-	height: 320px;
-}
-#msform .closeBtnCross{
-	position: absolute;
-	top: 5px;
-	right: 11px;
-}
-#msform fieldset {
-	width: 80%;
-	margin: auto;
-	right: 0;
-	left: 0;
-	
-	/*stacking fieldsets above each other*/
-	position: relative;
-}
-#msform fieldset input.fa-paperclip::before{
-	position: absolute;
-    top: 16px;
-	left: 17px;
-	z-index: 1;
-}
-#msform fieldset input[type="text"]{
-	position: relative;
-	z-index: 0;
-	padding-right: 27px;
-}
-#msform fieldset input.departureDate::after{
-	content:'';
-	background:red;
-	height:10px;
-	width:10px;
-	position: absolute;
-	left:0;
-	right:0;
-}
-#msform fieldset .famInputIco{
-	position: relative;
-	z-index: 2;
-}
-#msform fieldset .famInputIco::before{
-	z-index: 2;
-	position: absolute;
-	right: 8px;
-	top: 10px;
-	color: #ced4da;
-}
-#msform fieldset .famInputIco input{
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-	font-weight: 500;
-	border-radius: 4px 0px 0px 4px;
-}
-#msform fieldset input.fa-paperclip{
-width: 50px;
-padding: 50px 0 0 0;
-height: 50px;
-overflow: hidden;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-background: transparent;
-border-radius: 50%;
-background-size: 60px 60px;
-position: absolute;
-border: none;
-top: -4px;
-background: rgba(51, 51, 51, 0.08);
-right: -4px;
-margin: 10px;
-cursor: pointer;
-transition: 0.5s all ease-in-out;
-}
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-	display: none;
-}
-.mobileversionTabContent{
-    border: none;
-    background: white;
-    border-radius: 50px;
-	margin: auto;
-	transform: scale(0);
-	height: 0;
-	width: 0;
-	
-}
-.mobileversionTabContent a.nav-link{
-	border: none;
-    border-radius: 50px;
-	margin: 0;
-	background:white;
-	transition-property: all;
-	transition-duration: .5s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-	padding: 16px;
-    border: 3px solid white;
-    /* height: 0; */
-	line-height: 0;
-	text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 400;
-	letter-spacing: 0.3px;
-	color: #36ad6f;
-}
-.mobileversionTabContent a.nav-link.active{
-	background: #36ad6f;
-    border: 3px solid white;
-    color: white;
-}
-/*progressbar*/
-#progressbar {
-	margin-bottom: 30px;
-	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
-	padding: 0;
-}
-#progressbar li {
-	list-style-type: none;
-	color: #333;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
-	float: left;
-	position: relative;
-}
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: #eee;
-	border-radius: 50%;
-	margin: 0 auto 5px auto;
-}
-/*progressbar connectors*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: #eee;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
-}
-#progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
-}
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
-	color: white;
-}
-
 
 
 @media(min-width: 768px){
 	#mobileNavShowHide{
-		display: none;
+	display: none;
 	}
 }
 @media(max-width: 767px){
 	.mobileversionTabContent{
-		margin-top: -20px;
-		margin-bottom: -14px;
-		transform: scale(1);
-		height: auto;
-		width: fit-content;
+	margin-top: -20px;
+	margin-bottom: -14px;
+	transform: scale(1);
+	height: auto;
+	width: fit-content;
 	}
 	.dropdownCollapse{
-		top: 70px !important;
+	top: 70px !important;
 	}
 
 	#navbarSection .col{
-		padding: 0;
+	padding: 0;
 	}
 	#navbarSection .DashboardTitle {
-    margin-top: 15px;
-    font-weight: 600;
-    color: #36ad6f;
-    letter-spacing: 0.4px;
+	margin-top: 15px;
+	font-weight: 600;
+	color: #36ad6f;
+	letter-spacing: 0.4px;
 	margin-bottom: 0;
 	font-size: 22px;
 	border-bottom: 1px solid #36ad6f;
-    padding-bottom: 10px;
+	padding-bottom: 10px;
 	}
 	#navbarSection .tripBtn {
-    margin: 0;
+	margin: 0;
 	padding: 33px 0px;
-		padding-left: 10px;
-}
+	padding-left: 10px;
+	}
 	#navbarSection{
-		    position: absolute;
-    top: -100%;
+	position: absolute;
+	top: -100%;
 	z-index: 1;
 	transition: 0.5s all ease-in-out;
-	    width: 100%;
+	width: 100%;
 	}
 	#navbarSection .tripUl {
 	padding: 15px 0;
 	padding-right: 10px;
-	    margin-left: -10px;
-}
-#mobileNavShowHide{
+	margin-left: -10px;
+	}
+	#mobileNavShowHide{
 	cursor: pointer !important;
 	height: 70px;
-}
-#mobileNavShowHide .box-button-mobile-show-top{
-		color: white !important;
-    	border-top: 0;
-		width: fit-content;
-		text-align: center;
-		margin-left: 10px !important;
-		padding: 0px 20px;
-		border-radius: 0px 0px 50px 50px;
-		font-size: 47px;
-		position: absolute;
-		right: 0;
-		z-index: 1;
-		top: 6px;
-		transition: 0.5s all ease-in-out;
-		
-		
+	}
+	#mobileNavShowHide .box-button-mobile-show-top{
+	color: white !important;
+	border-top: 0;
+	width: fit-content;
+	text-align: center;
+	margin-left: 10px !important;
+	padding: 0px 20px;
+	border-radius: 0px 0px 50px 50px;
+	font-size: 47px;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	top: 6px;
+	transition: 0.5s all ease-in-out;
+
+
 	}
 	#mobileNavShowHide .box-button-mobile-show-top:hover, #mobileNavShowHide .box-button-mobile-show-top:focus{
-	/* top: 142px; */
 	z-index: 2;
 	}
-	/* #chats {
-	height: calc(100vh - 280px);
-	} */
 	#bodyMain .chatbox, #bodyMain .menubox {
 	height: calc(100vh - 80px);
 	}
@@ -1624,32 +1797,32 @@ transition: 0.5s all ease-in-out;
 	height: calc(100vh - 216px);
 	}
 	.modal-backdrop.show{
-		z-index: 0 !important;
+	z-index: 0 !important;
 	}
 
 	.tab1, .tab2{
-		padding: 0;
+	padding: 0;
 	}
 	#bodyMain .menubox .buttonGroupMenuDropUpForm {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 	width: 98%;
 	}
 	#bodyMain .chatbox,
 	#bodyMain .menubox{
-		margin-top: 10px;
+	margin-top: 10px;
 	}
 	.mobileversionTabNav{
 	position: absolute;
-    right: 0;
-    top: -30px;
-    left: 0;
+	right: 0;
+	top: -30px;
+	left: 0;
 	}
 	.chatFormInput textarea.form-control, .bottomMenuGroup{
-		border-radius: 0;
+	border-radius: 0;
 	}
 	#bodyMain .menubox{
-		border-radius: 12px 12px 0px 0px;
+	border-radius: 12px 12px 0px 0px;
 	}
 }
 
@@ -1660,6 +1833,10 @@ transition: 0.5s all ease-in-out;
 		width: 50px;
 	}
 }
+
+/* 
+	b. navbar mobile version
+*/
 
 .showNavPanelShowButton{
 	top: 0 !important;
@@ -1681,5 +1858,6 @@ transition: 0.5s all ease-in-out;
 	top: 0 !important;
 	left: 0;
     }
+
 
 
