@@ -27,7 +27,6 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="tutorStartTitle">Modal title</h5> -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times; </span>
                     </button>
@@ -112,9 +111,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <ul>
+                                               
                                                 <li>
-                                                    <a href="#" data-toggle="modal" data-target="#editProfileModal">Edit
+                                                    <a href="#" data-toggle="modal" data-target="#editProfileModal" data-dismiss="modal">Edit
                                                         Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">
+                                                        Sign In</a>
                                                 </li>
                                                 <li>
                                                     <a href="#" id="showTutorialButtn">Tutorial</a>
@@ -281,9 +285,6 @@
 
 
     <section id="bodyMain">
-        <!-- <div class="container"> -->
-        <!-- <div class="row"> -->
-        <!-- <div class="col"> -->
         <!-- TRIPS COLLAPSE UP/DOWN -->
         <div class="collapse dropdownCollapse" id="collapseExample">
             <div class="card card-body">
@@ -506,9 +507,7 @@
                 </div>
             </div>
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
-        <!-- </div> -->
+
         <div class="container-fluid">
             <div class="row mobileversionTabNav">
                 <div class="col-md-12">
@@ -1507,6 +1506,67 @@
         </div>
     </section>
 
+    <!-- signupModal -->
+    <div class="modal fade" id="signupModal" data-backdrop="static" role="dialog" aria-labelledby="signupModalTitle" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Welcome to trip dashboard</h5>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="text-left">
+                        <p class="lead mb-4"> Please sign in here to connect with travel assistant </p>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block p-2">Sign in</button>
+                    </form>
+                    <div class="modFooter mt-4 mb-2 text-center">
+                        <h6 class="mb-0"> Don't have account?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">Sign up here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signinModal -->
+    <div class="modal fade" id="signinModal" data-backdrop="static" role="dialog" aria-labelledby="signinModalTitle"
+        >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Welcome to trip dashboard</h5>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="text-left">
+                        <p class="lead mb-4"> Please sign in here to connect with travel assistant </p>
+                        <button type="button" class="btn btn-success btn-block mb-3 btn-facebook"> <i class="fa fa-facebook pr-3"></i>Facebook</button>
+                        <p class="text-center lead"> or</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="FillName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block p-2">Sign up</button>
+                    </form>
+                    <div class="modFooter mt-4 mb-2 text-center">
+                        <h6 class="mb-0"> Already got an account?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Sign in here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
 
 
     <!-- SCRIPTS -->

@@ -1775,13 +1775,13 @@ background: white;
 	width: fit-content;
 	text-align: center;
 	margin-left: 10px !important;
-	padding: 0px 20px;
+	padding: 2px 14px 6px 14px;
 	border-radius: 0px 0px 50px 50px;
-	font-size: 47px;
+	font-size: 27px;
 	position: absolute;
-	right: 0;
+	right: 10px;
 	z-index: 1;
-	top: 6px;
+	top: 18px;
 	transition: 0.5s all ease-in-out;
 
 
@@ -1842,7 +1842,7 @@ background: white;
 	top: 0 !important;
 	background: #36ad6f !important;
 	color: white !important;
-	right: 0px !important;
+	right: 5px !important;
 	z-index: 2 !important;
 
 }
@@ -1861,3 +1861,64 @@ background: white;
 
 
 
+#signinModal{
+
+}
+#signinModal .modal-content, #signupModal .modal-content{
+border: none;
+border-radius: 12px;
+}
+#signinModal .modal-content .modal-header, #signupModal .modal-content .modal-header{
+	margin: auto;
+	width: 100%;
+	display: block;
+}
+#signinModal .modal-content .modal-header h5, #signupModal .modal-content .modal-header h5{
+	font-size: 18px;
+}
+#signinModal .modal-content .modal-body .lead, #signupModal .modal-content .modal-body .lead{
+text-align: center;
+color: #9b9b9b;
+font-weight: 200;
+font-size: 16px;
+letter-spacing: 0.2px;
+}
+#signinModal .modal-content .modal-body .btn-facebook{
+background-color: #3b5998;
+border-color: #3b5998;
+font-weight: 300;
+font-size: 14px;
+}
+#signinModal .modal-content .modal-body .btn-facebook:focus{
+box-shadow: 0 0 0 0.2rem rgba(56, 87, 154, 0.42);
+}
+#signinModal .modal-content .modal-body form, #signupModal .modal-content .modal-body form{
+width: 80%;
+margin: auto;
+padding-top: 5px;
+}
+#signinModal .modal-content .modal-body .modFooter h6, #signupModal .modal-content .modal-body .modFooter h6{
+color: #6c6c6c;
+}
+#signinModal .modal-content .modal-body .modFooter a, #signupModal .modal-content .modal-body .modFooter a{
+color: #2dae6d;
+text-decoration: underline;
+font-size: 14px;
+}
+		
+
+
+
+.modal-content{
+	transform: scale(0);
+	transition: 0.5s all ease-in-out;
+}
+
+.show .modal-content{
+	transform: scale(1);
+}
+.show{
+	visibility: visible !important;
+	
+
+}
