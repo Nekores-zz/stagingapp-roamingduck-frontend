@@ -73,8 +73,8 @@
                 </div>
                 <div class="col pr-0">
                     <p class="tripBtn">
-                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#mytripCollapse" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample2">
                             My Trips
                         </a>
 
@@ -88,7 +88,7 @@
                         <li class="nav-item dropdown">
                             <a class="btn-theme-circle-primary btn-invite" data-toggle="collapse"
                                 href="#invitationUserCollpase" role="button" aria-expanded="false"
-                                aria-controls="invitationUserCollpase">
+                                aria-controls="multiCollapseExample2" data-toggle="collapse">
                                 <span class="fa fa-user-plus"></span>
                             </a>
                         </li>
@@ -272,7 +272,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="btn-theme-circle-bdr btn-about" data-toggle="collapse" href="#AboutVersion"
-                                role="button" aria-expanded="false" aria-controls="AboutVersion">
+                                role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
                                 <span class="fa fa-info"></span>
                             </a>
                         </li>
@@ -283,10 +283,9 @@
         </div>
     </section>
 
-
     <section id="bodyMain">
         <!-- TRIPS COLLAPSE UP/DOWN -->
-        <div class="collapse dropdownCollapse" id="collapseExample">
+        <div class="collapse dropdownCollapse" id="mytripCollapse" data-parent="#mainRoot">
             <div class="card card-body">
                 <div class="tripTasks">
                     <ol>
@@ -360,7 +359,7 @@
         </div>
 
         <!-- INVITATION COLLPASE UP/DOWN -->
-        <div class="collapse dropdownCollapse" id="invitationUserCollpase">
+        <div class="collapse dropdownCollapse" id="invitationUserCollpase" data-parent="#mainRoot">
             <div class="card card-body">
                 <div class="invitationJumbor">
                     <ol class="p-0">
@@ -417,7 +416,7 @@
         </div>
 
         <!-- ABOUT VERSION COLLPASE UP/DOWN -->
-        <div class="collapse dropdownCollapse" id="AboutVersion">
+        <div class="collapse dropdownCollapse" id="AboutVersion" data-parent="#mainRoot">
             <div class="card card-body pt-0">
                 <div class="AboutJumbor">
                     <ol class="p-0">
@@ -767,7 +766,7 @@
                                     aria-expanded="false" aria-controls="showFiltersCollpase"
                                     class="fa fa-filter filter-btn"></a>
                             </h3>
-                            <div class="collapse filtersIternaryBox" id="showFiltersCollpase">
+                            <div class="collapse filtersIternaryBox" id="showFiltersCollpase" data-parent="#mainRoot">
                                 <div class="contentBoxes">
                                     <h6>Apply Filter</h6>
                                     <div class="contentBox">
@@ -1506,8 +1505,8 @@
         </div>
     </section>
 
-    <!-- signupModal -->
-    <div class="modal fade" id="signupModal" data-backdrop="static" role="dialog" aria-labelledby="signupModalTitle" >
+    <!-- signinModal -->
+    <div class="modal fade" id="signinModal" data-backdrop="static" role="dialog" aria-labelledby="signupModalTitle" >
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -1523,18 +1522,19 @@
                             <input type="password" class="form-control" name="Password" placeholder="Password" required>
                         </div>
                         <button type="submit" class="btn btn-success btn-block p-2">Sign in</button>
+                        <a href="#" class="ForgotPassword" onClick="confirm('You will recieve short email, to password reset')"> have forgot password?</a>
                     </form>
                     <div class="modFooter mt-4 mb-2 text-center">
                         <h6 class="mb-0"> Don't have account?</h6>
-                        <a href="#" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">Sign up here</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Sign up here</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- signinModal -->
-    <div class="modal fade" id="signinModal" data-backdrop="static" role="dialog" aria-labelledby="signinModalTitle"
+    <!-- signupModal -->
+    <div class="modal fade" id="signupModal" data-backdrop="static" role="dialog" aria-labelledby="signinModalTitle"
         >
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -1559,7 +1559,7 @@
                     </form>
                     <div class="modFooter mt-4 mb-2 text-center">
                         <h6 class="mb-0"> Already got an account?</h6>
-                        <a href="#" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Sign in here</a>
+                        <a href="#" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">Sign in here</a>
                     </div>
                 </div>
             </div>

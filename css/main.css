@@ -1870,8 +1870,17 @@ background: white;
 */
 
 #signinModal .modal-content, #signupModal .modal-content{
-border: none;
-border-radius: 12px;
+	border: none;
+	border-radius: 12px;
+}
+#signinModal .modal-content .ForgotPassword{
+	font-size: 10px;
+	text-transform: capitalize;
+	float: right;
+	margin-right: 5px;
+	margin-top: 3px;
+	color: #33333385;
+	font-weight: 500;
 }
 #signinModal .modal-content .modal-header, #signupModal .modal-content .modal-header{
 	margin: auto;
