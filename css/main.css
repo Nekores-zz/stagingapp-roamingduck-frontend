@@ -1897,14 +1897,14 @@ font-weight: 200;
 font-size: 16px;
 letter-spacing: 0.2px;
 }
-#signinModal .modal-content .modal-body .btn-facebook{
-background-color: #3b5998;
-border-color: #3b5998;
+#signupModal .modal-content .modal-body .btn-facebook{
+background-color: #3b5998 !important;
+border-color: #3b5998 !important;
 font-weight: 300;
 font-size: 14px;
 }
-#signinModal .modal-content .modal-body .btn-facebook:focus{
-box-shadow: 0 0 0 0.2rem rgba(56, 87, 154, 0.42);
+#signupModal .modal-content .modal-body .btn-facebook:focus{
+box-shadow: 0 0 0 0.2rem rgba(56, 87, 154, 0.42) !important;
 }
 #signinModal .modal-content .modal-body form, #signupModal .modal-content .modal-body form{
 width: 80%;
