@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="frameworks/bootstrap/css/bootstrap.min.css" />
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FLat icons -->
+    <link rel="stylesheet" type="text/css" media="screen" href="frameworks/icons/font/flaticon.css" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+
+</head>
+
+<body id="mainRoot" class="admin-dashboard">
+    <div class="tutorWrapper"></div>
+    <div class="modal fade" id="tutorStart" role="dialog" aria-labelledby="tutorStartTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times; </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b> A Travel Assistant Will Join You Shortly!</b>
+                    </p>
+                    <p>
+                        Would you like to do a quick tutorial?
+
+                    </p>
+                    <br />
+                    <div class="float-right"><button class="btn btn-success pl-4 pr-4 tutorStartTitleYes">Yes</button>
+                        <button class="btn btn-light pl-4 pr-4 tutorStartTitleSkip">Skip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR COMPONENT -->
+    <div id="mobileNavShowHide">
+        <div class="box-button-mobile-show-top ">
+            <span class="fa fa-bars angleIcon"></span>
+        </div>
+    </div>
+    <section id="navbarSection" class="bg-light">
+        <div id="navbarSectionTutorPopup">
+            <div class="navbarSectionTutorPopup-body">
+                <b class="float-right"> 3/3</b>
+                <h4> Topbar</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+
+                <button class="btn btn-light float-left btn-disable" id="navbarSectionTutorPopupBack"> Back</button>
+                <button class="btn btn-success float-right" id="navbarSectionTutorPopupFinish"> Finish</button>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mobileColShow">
+                    <h2 class="DashboardTitle"> Admin Dashboard</h2>
+                </div>
+                <div class="col pr-0">
+                    <p class="tripBtn">
+                        <a class="btn-theme-circle-primary" data-toggle="collapse" href="#mytripCollapse" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample2">
+                            Agents
+                        </a>
+
+                    </p>
+                </div>
+                <div class="col-sm-auto desktopColShow">
+                    <h2 class="DashboardTitle"> Admin Dashboard</h2>
+                </div>
+                <div class="col">
+                    <ul class="tripUl text-right">
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle UserProfile" href="#" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                <img src="img/user.jpg" class="img-fluid ProfilePic" alt="">
+                            </a>
+                            <!-- Modal Profile -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#editProfileModal"
+                                                        data-dismiss="modal">Edit
+                                                        Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#signinModal"
+                                                        data-dismiss="modal">
+                                                        Sign In</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" id="showTutorialButtn">Tutorial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Edit Profile -->
+                            <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog"
+                                aria-labelledby="editProfileModalTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body p-4">
+                                            <form class="text-left">
+                                                <div class="profileEditPic">
+                                                    <img src="img/user.jpg" alt="" width="150" height="150">
+                                                    <p> Profile Picture</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputName">Name</label>
+                                                    <input type="text" class="form-control" name="inputName"
+                                                        placeholder="Ragnar">
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputEmail4">Email</label>
+                                                        <input type="email" class="form-control" name="inputEmail4"
+                                                            placeholder="Email">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputPassword4">Password</label>
+                                                        <input type="password" class="form-control"
+                                                            name="inputPassword4" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn btn-success float-right">Confirm</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Print -->
+                            <div class="modal fade" id="PrintPaper" tabindex="-1" role="dialog"
+                                aria-labelledby="PrintPaperTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Continue Print</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-dismiss="modal" aria-label="Close">Cancel
+                                                        Request</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Attachment -->
+                            <div class="modal fade" id="attachementsShow" tabindex="-1" role="dialog"
+                                aria-labelledby="attachementsShowTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6> Attachments</h6>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <li class="text-left float-riht">
+                                                    <button class="btn btn-success"><span class="fa fa-plus"></span> Add
+                                                        File</button>
+                                                </li>
+                                                <li class="text-left pb-2">
+                                                    <div class="attachmentItem">
+                                                        <p class="m-0">
+                                                            <span class="attachedFile">
+                                                                <span class="fa fa-file"></span>
+                                                                attachement-1.pdf
+                                                            </span>
+                                                            <span class="attachmentBtnGroup float-right">
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="View"><span class="fa fa-eye"></span></a>
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="Download"><span
+                                                                        class="fa fa-download"></span></a>
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="Delete"><span class="fa fa-trash"></span></a>
+
+
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="text-left pb-2">
+                                                    <div class="attachmentItem">
+                                                        <p class="m-0">
+                                                            <span class="attachedFile">
+                                                                <span class="fa fa-file"></span>
+                                                                Attachement-2.docx
+                                                            </span>
+                                                            <span class="attachmentBtnGroup float-right">
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="View"><span class="fa fa-eye"></span></a>
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="Download"><span
+                                                                        class="fa fa-download"></span></a>
+                                                                <a href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="Delete"><span class="fa fa-trash"></span></a>
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+
+                                                <li class="float-right p-0">
+                                                    <a href="#" data-dismiss="modal" aria-label="Close"
+                                                        class="btn btn-ligh"> Close</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="bodyMain">
+        <div class="container-fluid">
+            <div class="row mobileversionTabNav">
+                <div class="col-md-12">
+                    <nav>
+                        <div class="mobileversionTabContent nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="myClients-tab" data-toggle="tab" href="#myClients"
+                                role="tab" aria-controls="myClients" aria-selected="true">My clients</a>
+                            <a class="nav-item nav-link" id="newJobs-tab" data-toggle="tab" href="#newJobsTab"
+                                role="tab" aria-controls="newJobs" aria-selected="false">New Jobs</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row tab-content">
+                <div class="col-md-6 tab1" id="myClients" role="tabpanel" aria-labelledby="myClients-tab">
+                    <div class="leftbox">
+                        <div class="alpha-color">
+                            <div class="bottomPart"></div>
+                            <h3 class="boXtitle">My clients</h3>
+                            <div id="leftBox" class="myClients">
+                                <ol class="p-0">
+                                    <!-- item1 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href=""> <span class="fa fa-refresh"></span> <p> 6 Updates</p></a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- item2 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href=""> <span class="fa fa-refresh"></span>
+                                                    <p> 3 Updates</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <!-- item3 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href=""> <span class="fa fa-refresh"></span>
+                                                    <p> 2 Updates</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- item4 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href=""> <span class="fa fa-refresh"></span>
+                                                    <p> 0 Updates</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 tab2" id="newJobsTab" role="tabpanel" aria-labelledby="newJobsTab-tab">
+                    <div id="rightBox" class="newJobs">
+                        <div class="alpha-color">
+                            <div class="bottomPart"></div>
+                            <h3 class="boXtitle">New jobs
+                                <a data-toggle="modal" data-target="#PrintPaper" href="#" title="Print"
+                                    class="fa fa-print print-btn"></a>
+                                <a data-toggle="collapse" href="#showFiltersCollpase" role="button"
+                                    aria-expanded="false" aria-controls="showFiltersCollpase"
+                                    class="fa fa-filter filter-btn"></a>
+                            </h3>
+                            <div class="collapse filtersIternaryBox" id="showFiltersCollpase" data-parent="#mainRoot">
+                                <div class="contentBoxes">
+                                    <h6>Apply Filter</h6>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Flight</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Accomodation</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Activity</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox">
+                                            Transport</label>
+                                    </div>
+                                    <div class="contentBox">
+                                        <label>
+                                            <input type="checkbox" checked>
+                                            All</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="myJobsBody">
+                                <ol class="p-0">
+                                    <!-- item1 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href="#"> <span class="fa fa-hand-o-up"></span>
+                                                    <p> Get Job</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- item2 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href="#"> <span class="fa fa-hand-o-up"></span>
+                                                    <p> Get Job</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <!-- item3 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href="#"> <span class="fa fa-hand-o-up"></span>
+                                                    <p> Get Job</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- item4 -->
+                                    <li class="itemsData">
+                                        <div class="card card-body">
+                                            <div class="notificationUpdate">
+                                                <a href="#"> <span class="fa fa-hand-o-up"></span>
+                                                    <p> Get Job</p>
+                                                </a>
+                                            </div>
+                                            <div class="media">
+                                                <div class="input-group-prepend">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-plane"></span>
+                                                                <p>Flight</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-bed"></span>
+                                                                <p>Acco..</p>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success"><span
+                                                                    class="flaticon-tourist"></span>
+                                                                <p>Activity</p>
+                                                            </button>
+
+                                                        </li>
+                                                        <li>
+                                                            <div class="input-group mb-2 mt-1">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">Total Budget</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                    value="$2,500" aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">No.
+                                                                        of Travellers</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" value="2"
+                                                                    aria-label="Username"
+                                                                    aria-describedby="basic-addon1">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="mb-1">Kids under 15 ? &nbsp;
+                                                                    <input type="checkbox" data-toggle="tooltip"
+                                                                        data-placement="top" title="kids?"
+                                                                        checked></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="media-body">
+
+                                                    <div class="input-group mb-2 mt-1">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">When</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Text input with checkbox"
+                                                            value="Malebourine to Thiland">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                id="basic-addon1">Where</span>
+                                                        </div>
+                                                        <input type="text" value="10/04/19 to 12/12/2019"
+                                                            class="form-control" aria-label="Text input with checkbox">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" data-toggle="tooltip"
+                                                                data-placement="top" title="Flexible?">
+                                                                <input type="checkbox"
+                                                                    aria-label="Checkbox for following text input"
+                                                                    checked>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Notes</span>
+                                                        <textarea type="text" class="form-control"
+                                                            rows="4"> Hello, this is default text.</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- signinModal -->
+    <div class="modal fade" id="signinModal" data-backdrop="static" role="dialog" aria-labelledby="signupModalTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Welcome to admin dashboard</h5>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="text-left">
+                        <p class="lead mb-4"> Please sign in here to connect with travel assistant </p>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block p-2">Sign in</button>
+                        <a href="#" class="ForgotPassword"
+                            onClick="confirm('You will recieve short email, to password reset')"> have forgot
+                            password?</a>
+                    </form>
+                    <div class="modFooter mt-4 mb-2 text-center">
+                        <h6 class="mb-0"> Don't have account?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Sign up here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signupModal -->
+    <div class="modal fade" id="signupModal" data-backdrop="static" role="dialog" aria-labelledby="signinModalTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Welcome to admin dashboard</h5>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="text-left">
+                        <p class="lead mb-4"> Please sign in here to connect with travel assistant </p>
+                        <!-- <button type="button" class="btn btn-success btn-block mb-3 btn-facebook"> <i
+                                class="fa fa-facebook pr-3"></input>Facebook</button> -->
+                        <!-- <p class="text-center lead"> or</p> -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="FillName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block p-2">Sign up</button>
+                    </form>
+                    <div class="modFooter mt-4 mb-2 text-center">
+                        <h6 class="mb-0"> Already got an account?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">Sign in here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQUERRY -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
+
+    <!-- POPPER JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script> -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="frameworks/jquery/jquery-2.1.0.min.js"></script>
+    <script src="frameworks/jquery/jquery-easing.js"></script>
+    <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <script src="frameworks/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

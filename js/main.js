@@ -12,12 +12,12 @@ $('.btn-bottomMenuGroup').on('click',()=>{
     $('.buttonGroupMenuDropUp ul').toggleClass("showMenudropUp"); 
 });
 $('.buttonGroupMenuDropUp  ul li a').on('click',()=>{
-    $('.menubox .buttonGroupMenuDropUpForm').toggleClass("showMenudropUpForm");
+    $('#rightBox .buttonGroupMenuDropUpForm').toggleClass("showMenudropUpForm");
     $('.buttonGroupMenuDropUp ul').toggleClass("showMenudropUp");
     
 })
 $('.buttonGroupMenuDropUpForm input.closeForm , .buttonGroupMenuDropUpForm button.close.closeBtnCross').on('click',()=>{
-    $('.menubox .buttonGroupMenuDropUpForm').toggleClass("showMenudropUpForm");
+    $('#rightBox .buttonGroupMenuDropUpForm').toggleClass("showMenudropUpForm");
     $('.buttonGroupMenuDropUp ul').toggleClass("showMenudropUp");
 })
 
@@ -29,7 +29,7 @@ if ($(window).width() < 768) {
 // ON DOCUMENT LOAD
 $(document).ready(function () {
 
-    
+   
     // turtorial popup and wrapper
     function showTutorial(){
         // TUTORIAL YES OR SKIP MODAL
@@ -94,18 +94,18 @@ $(document).ready(function () {
 
             // function body starts
             var tutorial3 = function () {
-                $('.chatFormInput').addClass('indexShow');
-                $('.chatAreaTutorPopup-body').addClass('chatAreaTutorPopup-body-active');
+                $('.leftFormInput').addClass('indexShow');
+                $('.leftAreaTutorPopup-body').addClass('leftAreaTutorPopup-body-active');
 
                 // TUTORIAL 1: ON PRESS Cancel BUTTON
-                $('#chatAreaTutorPopupCancel').on('click', () => {
-                    $('.chatAreaTutorPopup-body').removeClass('chatAreaTutorPopup-body-active');
+                $('#leftAreaTutorPopupCancel').on('click', () => {
+                    $('.leftAreaTutorPopup-body').removeClass('leftAreaTutorPopup-body-active');
                     $('.tutorWrapper').removeClass('TutorActive');
                 });
                 // TUTORIAL 1: ON PRESS FINISH BUTTON
-                $('#chatAreaTutorPopupNext').on('click', () => {
-                    $('.chatAreaTutorPopup-body').removeClass('chatAreaTutorPopup-body-active');
-                    $('.chatFormInput').removeClass('indexShow');
+                $('#leftAreaTutorPopupNext').on('click', () => {
+                    $('.leftAreaTutorPopup-body').removeClass('leftAreaTutorPopup-body-active');
+                    $('.leftFormInput').removeClass('indexShow');
                     tutorial1();
                 });
             }
@@ -127,13 +127,12 @@ $(document).ready(function () {
         }); 
     }
 
-    // on window load
-    
-
-    if ($(window).width() > 768) {
-        showTutorial();
+    // tutorial runs here - script
+    if (window.location.pathname == '/trip-dashboard.html') {
+        if ($(window).width() > 768) {
+            showTutorial();
+        }
     }
-
 
 
     // navbar tutorial tab on click show tutorial popup
