@@ -274,5 +274,10 @@ $(".submit").click(function () {
 
 
 
+$('.NavSidebarShowBtn').on('click', ()=>{
+    $('.NavSidebar').toggleClass('NavSidebarShow');
+    $('.showNavPanelShowButton').fadeToggle(100);
+})
+
 
 
